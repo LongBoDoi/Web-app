@@ -2,12 +2,14 @@
 /* Global Styles */
 
 body {
+	background: url("../images/background.jpg");
+	background-size: cover;
 	margin-left: auto;
 	margin-right: auto;
 	width: 92%;
 	max-width: 960px;
 	padding-left: 2.275%;
-	padding-right: 2.275%;
+	padding-right: 2.275%;	
 }
 /* Header */
 header {
