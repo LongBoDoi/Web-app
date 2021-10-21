@@ -43,48 +43,71 @@ thead {
     <th>Xóa</th>
   </tr>
   <tr id="1">
-    <td><input type="text" name="mssv"></td>
-    <td><input type="text" name="HovaTen"></td>
-    <td><input type="text" name="Lop"></td>
+    <td><input type="text" id="mssv" onkeyup="myFunction(this)" title="nhap ma sv"></td>
+    <td><input type="text" id="hovaten" onkeyup="myFunction(this)" title="nhap ho va ten"></td>
+    <td><input type="text" id="lop" onkeyup="myFunction(this)" title="nhap lop"></td>
 	<td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   </thead>
-  <tbody>
+  <tbody id="tbody">
   <tr id="2">
     <td>19021320</td>
-    <td>Trần Duy Linh</td>
-    <td>K64-CA-CLC4</td>
-	<td>11111111111</td>
-	<td><a href = "email@gmail.com">email@gmail.com</a></td>
+    <td>Trần</td>
+    <td>K64</td>
+	<td><a href = "tel:111111111">11111111111</a></td>
+	<td><a href = "email:email@gmail.com">email@gmail.com</a></td>
     <td><a href="">Info</a></td>
     <td><button><i><img src="./icon/delete.jpg" width="15px" height="15px"></i></button></td>
   </tr>
   <tr id="3">
-    <td>19021320</td>
-    <td>Trần Duy Linh</td>
-    <td>K64-CA-CLC4</td>
-	<td>11111111111</td>
-	<td><a href = "email@gmail.com">email@gmail.com</a></td>
+    <td>20021111</td>
+    <td>Duy</td>
+    <td>CA</td>
+	<td><a href = "tel:111111111">11111111111</a></td>
+	<td><a href = "gmail:email@gmail.com">email@gmail.com</a></td>
     <td><a href="">Info</a></td>
     <td><button><i><img src="./icon/delete.jpg" width="15px" height="15px"></i></button></td>
   </tr>
   <tr id="4">
-    <td>19021320</td>
-    <td>Trần Duy Linh</td>
-    <td>K64-CA-CLC4</td>
-	<td>11111111111</td>
-	<td><a href = "email@gmail.com">email@gmail.com</a></td>
+    <td>21022222</td>
+    <td>Linh</td>
+    <td>CLC4</td>
+	<td><a href = "tel:111111111">11111111111</a></td>
+	<td><a href = "email:email@gmail.com">email@gmail.com</a></td>
     <td><a href="">Info</a></td>
     <td><button><i><img src="./icon/delete.jpg" width="15px" height="15px"></i></button></td>
   </tr>
+  
   </tbody>
 </table>
 
 </body>
 </html>
 <script>
+	function myFunction(idinput) {
+  var input, filter, table, tr, td, i, txtValue, idex;
+  input = document.getElementById(idinput.id);
+  filter = input.value.toUpperCase();
+  table = document.getElementById("tbody");
+  tr = table.getElementsByTagName("tr");
+  
+  if (idinput.id == "mssv") idex = 0;
+  else if (idinput.id == "hovaten") idex = 1;
+  else idex = 2;
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[idex];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
 </script>
 
