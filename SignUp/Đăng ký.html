@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Đăng ký</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+<div class="main">
+<div class="header"><h1>Đăng ký</h1></div>	
+						
+<form>
+	<input type="text"  id ="fullname"  value="Tên của bạn" name="fullname" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên của bạn';}"/>
+	<input type="text" id ="DateOfBirth" value="Ngày sinh" name="birth" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Ngày sinh';}"/>
+	<input type="text"  id ="username"  value="Tên tài khoản" name="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên tài khoản';}"/>
+	<input type="text" id ="password" value="Mật khẩu" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mật khẩu';}"/>
+        <input type="text" id ="confirmPass" value="Xác nhận Mật khẩu" name="confirmPass" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Xác nhận Mật khẩu';}"/>
+	<input type="text" id ="email" value="Email" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"/>
+	<input type="text" id ="Phone" value="Số điện thoại" name="phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Số điện thoại';}"/>
+	</br></br>				 				   
+	<input type="submit" value="Tạo tài khoản" onclick="signUp()">
+</form>	
+</div>				
+
+
+</body>
+<script>
+function signUp(){
+	var valueFull = document.getElementById("fullname").value;
+	var valueUser = document.getElementById("username").value;
+	var valuePass = document.getElementById("password").value;
+    var valueconfirmPass = document.getElementById("confirmPass").value;
+    var valueEmail = document.getElementById("email").value;
+    if(valueFull == 'Tên đầy đủ'){
+		alert('Bạn phải điền Tên đầy đủ');
+	}
+	else{
+		if(valueFull.length < 8){
+			alert('Tên đầy đủ phải có độ dài từ 8 ký tự trở lên');
+		}
+        else{
+        	
+        }
+	}
+	if(valueUser == 'Tên tài khoản'){
+		alert('Bạn phải điền Tên tài khoản');
+	}
+	else{
+		if(valueUser.length < 8 || valueUser.length > 32){
+			alert('Tên tài khoản phải có độ dài từ 8-32 ký tự');
+		}
+        else{
+        	
+        }
+	}
+    
+    if(valuePass == 'Mật khẩu'){
+		alert('Bạn phải điền Mật khẩu');
+	}
+	else{
+		if(valuePass.length < 8 || valuePass.length > 16){
+			alert('Mật khẩu phải có độ dài từ 8-16 ký tự');
+		}
+        else{
+        	
+        }
+	}
+    
+    if(valueconfirmPass == 'Xác nhận Mật khẩu'){
+		alert('Bạn phải xác nhận lại Mật khẩu');
+	}
+	else{
+		if(valueconfirmPass != valuePass){
+			alert('Mật khẩu không giống nhau');
+		}
+        else{
+        	
+        }
+	}
+}
+
+
+</script>
+</html>

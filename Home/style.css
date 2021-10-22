@@ -1,0 +1,29 @@
+
+body{
+	background: url(background.jpg);
+	background-size: cover;
+	text-align: center;
+}
+
+.white{
+	color: #ffffff;
+}
+
+.signin{
+	background: none;
+	color: #ffffff;
+	display: inline-block;
+	outline: none;
+	border: none;
+	width: 30%;
+	height:35px;
+}
+.signup{
+	background: none;
+	color: #ffffff;
+	display: inline-block;
+	outline: none;
+	border: none;
+	width: 30%;
+	height:35px;
+}
