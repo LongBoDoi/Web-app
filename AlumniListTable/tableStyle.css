@@ -1,0 +1,31 @@
+body {
+	background: url(background.jpg);
+	background-size: cover;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  position: center;
+  
+}
+
+tbody {
+  background-color: #D3D3D3;
+}
+.alignright{
+	text-align: right;
+}
+th, td {
+  border: 3px solid #ffffff;
+  padding: 5px;
+}
+tr:nth-child(even) {
+  background-color: #C0C0C0;
+}
+thead {
+	color: blue;
+	background-color: #AFEEEE;
+}
+h2 {
+	color: blue;
+}
