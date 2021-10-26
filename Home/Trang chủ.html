@@ -9,7 +9,7 @@
 
 <body>
 
-<p><h1 class="white">Chào mừng đến với trình quản lý cựu sinh viên</h1></p>
+<p><h1 class="white">Quản lý cựu sinh viên</h1></p>
 <p><h1 class="white">Nhóm 13</h1></p>
 <p><h2 class="white">Trần Thế Mạnh Long</h2></p>
 <p><h2 class="white">Đỗ Minh Trung</h2></p>
@@ -19,27 +19,13 @@
 	</br></br></br></br>					
 <form>
 					 				   
-	<input type="submit" class="signin" id="signin" value="Đăng Nhập" onclick="subsignin()" onmouseenter="choosesignin()">
-	<input type="submit" class="signup"  id="signup" value="Đăng Ký" onclick="subsignup()" onmouseenter="choosesignup()">
+	<input type="submit" class="signin" id="signin" value="Đăng Nhập" onclick="subsignin()" onmouseenter="choosesignin()" onmouseleave="leavesignin()">
+	<input type="submit" class="signup"  id="signup" value="Đăng Ký" onclick="subsignup()" onmouseenter="choosesignup()" onmouseleave="leavesignup()">
 </form>	
 </div>				
 
 
 </body>
-<script>
-function subsignin(){
-	
-}
-
-function subsignup(){
-}
-
-function choosesignin(){
-	document.getElementsByClassName("signin")[0].style.backgroundColor: #ff3366;
-}
-
-
-
-</script>
+<script src="script.js"></script>
 </html>
 
