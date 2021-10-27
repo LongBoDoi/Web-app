@@ -1,0 +1,41 @@
+body {
+background : url(background.jpg);
+background-size: cover;
+margin: 0;
+}
+
+.header {
+  background-color: none;
+  color: #ffffff;
+  padding: 20px;
+  text-align: left;
+}
+
+.header-01{
+	width:50%;
+	float: left;
+}
+
+.menu {
+  overflow: hidden;
+  background-color: none;
+  border: 2px solid white;
+}
+
+
+input[type="button"] {
+  background: none;
+  border: none;
+  float: left;
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.user{
+	position:relative;
+	left: 40%;
+	
+}

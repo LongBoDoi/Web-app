@@ -1,29 +1,23 @@
 function sub(){
 	var valueUser = document.getElementById("username").value;
 	var valuePass = document.getElementById("password").value;
-	if(valueUser == 'Tên tài khoản'){
-		alert('Bạn phải điền Tên tài khoản');
-	}
-	else{
-		if(valueUser.length < 8 || value.length > 32){
-			alert('Tên tài khoản phải có độ dài từ 8-32 ký tự');
+	
+	if(valueUser != "Tên tài khoản"){
+		if(valueUser.length >= 8){
+			if(valuePass != "Mật khẩu"){
+				if(valuePass.length  >=8){
+					window.location.assign("../Main/Main.html");
+				}
+				else alert('Tài khoản hoặc Mật khẩu không hợp lệ1');	
+			}
+			else alert('Tài khoản hoặc Mật khẩu không hợp lệ2');
 		}
-        else{
-        	
-        }
+		else alert('Tài khoản hoặc Mật khẩu không hợp lệ3');
+		
 	}
-    
-    if(valuePass == 'Mật khẩu'){
-		alert('Bạn phải điền Mật khẩu');
-	}
-	else{
-		if(valueUser.length < 8 || value.length > 16){
-			alert('Mật khẩu phải có độ dài từ 8-16 ký tự');
-		}
-        else{
-        	
-        }
-	}
+	else alert('Tài khoản hoặc Mật khẩu không hợp lệ4');
+			
+    	
 }
 
 function choosesignin(){

@@ -1,0 +1,57 @@
+h2{
+	color:#ffffff;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  position: center;
+  
+}
+body{
+	background: url(background.jpg);
+  background-size: cover;
+}
+
+tbody {
+  background: none;
+  
+}
+.alignright{
+	text-align: right;
+}
+th, td {
+  border: 2px solid #ffffff;
+  padding: 5px;
+  color: #ffffff;
+}
+a{
+	color: #ffffff;
+}
+tr:nth-child(even) {
+  background-color: none;
+}
+thead {
+	color: blue;
+	background-color: none;
+}
+
+.add{
+	background: none;
+	border: none;
+	color: #ffffff;
+  	text-align: center;
+  	padding: 14px 16px;
+	display: block;
+	float: left;
+	
+}
+.delete{
+	background: none;
+	border: none;
+	color: #ffffff;
+  	text-align: center;
+  	padding: 14px 16px;
+	display: block;
+	float: left;
+	
+}
