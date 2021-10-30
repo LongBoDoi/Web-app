@@ -1,0 +1,405 @@
+h2{
+	color:#ffffff;
+}
+table {
+  border-collapse: collapse;
+  width: 100%;
+  position: center;
+  
+}
+body{
+	background: url(background.jpg);
+  background-size: cover;
+}
+
+tbody {
+  background: none;
+  
+}
+.alignright{
+	text-align: right;
+}
+th, td {
+  border: 2px solid #ffffff;
+  padding: 5px;
+  color: #ffffff;
+}
+a{
+	color: #ffffff;
+}
+tr:nth-child(even) {
+  background-color: none;
+}
+thead {
+	color: blue;
+	background-color: none;
+}
+
+.add{
+	background: none;
+	border: none;
+	color: #ffffff;
+  	text-align: center;
+  	padding: 14px 16px;
+	display: block;
+	float: left;
+	
+}
+.delete{
+	background: none;
+	border: none;
+	color: #ffffff;
+  	text-align: center;
+  	padding: 14px 16px;
+	display: block;
+	float: left;
+	
+}
+
+
+.modi {
+  width: 588px;
+  height: 414px;
+  background: rgba(90,240,240,1);
+  opacity: 1;
+  position: absolute;
+  top: 113px;
+  left: 426px;
+  overflow: hidden;
+}
+.outmodi {
+	color: red;
+	border: 1px solid blue;
+	position: absolute;
+	right: 5px;
+	top: 5px;
+}
+.hotentext {
+  width: 68px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 11px;
+  left: 32px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.nstext {
+  width: 71px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 69px;
+  left: 32px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.loptext {
+  width: 27px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 127px;
+  left: 32px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.teltext {
+  width: 72px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 185px;
+  left: 32px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.ghichutext {
+  width: 54px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 245px;
+  left: 32px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.msvtext {
+  width: 90px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 11px;
+  left: 319px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.gttext {
+  width: 59px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 69px;
+  left: 319px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.tinhtext {
+  width: 114px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 127px;
+  left: 319px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.emailtext {
+  width: 40px;
+  color: rgba(0,0,0,1);
+  position: absolute;
+  top: 185px;
+  left: 319px;
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 16px;
+  opacity: 1;
+  text-align: left;
+}
+.hoteninput {
+  width: 237px;
+  height: 32px;
+  background: rgba(255,253,253,1);
+  opacity: 1;
+  position: absolute;
+  top: 30px;
+  left: 32px;
+  border: 1px solid blue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: center;
+}
+.nsinput {
+  width: 237px;
+  height: 32px;
+  background: rgba(255,253,253,1);
+  opacity: 1;
+  position: absolute;
+  top: 88px;
+  left: 32px;
+  border: 1px solid blue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: center;
+}
+.lopinput {
+  width: 237px;
+  height: 32px;
+  background: rgba(255,253,253,1);
+  opacity: 1;
+  position: absolute;
+  top: 146px;
+  left: 32px;
+  border: 1px solid blue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: center;
+}
+.telinput {
+  width: 237px;
+  height: 32px;
+  background: rgba(255,253,253,1);
+  opacity: 1;
+  position: absolute;
+  top: 204px;
+  left: 32px;
+  border: 1px solid blue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: center;
+}
+.ghichuinput {
+  width: 519px;
+  height: 96px;
+  background: rgba(255,253,253,1);
+  opacity: 1;
+  position: absolute;
+  border: 1px solid blue;
+  top: 265px;
+  left: 32px;
+  overflow: hidden;
+  
+  font-family: Roboto;
+  font-size: 18px;
+}
+.msvinput {
+  width: 237px;
+  height: 32px;
+  background: rgba(255,253,253,1);
+  opacity: 1;
+  position: absolute;
+  top: 30px;
+  left: 319px;
+  border: 1px solid blue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: center;
+}
+.gtinput {
+  width: 237px;
+  height: 32px;
+  background: rgba(255,253,253,1);
+  opacity: 1;
+  position: absolute;
+  top: 88px;
+  left: 319px;
+  border: 1px solid blue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: center;
+}
+.tinhinput {
+  width: 237px;
+  height: 32px;
+  background: rgba(255,253,253,1);
+  opacity: 1;
+  position: absolute;
+  top: 146px;
+  left: 319px;
+  border: 1px solid blue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: center;
+}
+.emailinput {
+  width: 237px;
+  height: 32px;
+  background: rgba(255,253,253,1);
+  opacity: 1;
+  position: absolute;
+  top: 204px;
+  left: 319px;
+  border: 1px solid blue;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  overflow: hidden;
+  
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 18px;
+  text-align: center;
+}
+.capnhatbutton {
+  width: 81px;
+  height: 21px;
+  background: rgba(51,79,178,1);
+  opacity: 1;
+  position: absolute;
+  top: 377px;
+  right:120px;
+  border: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+  
+  color: rgba(0,0,0,1);
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 4px;
+}
+.xoabutton {
+  width: 81px;
+  height: 21px;
+  background: rgba(51,79,178,1);
+  opacity: 1;
+  position: absolute;
+  top: 377px;
+  float:left;
+  right: 32px;
+  border: none;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  overflow: hidden;
+  
+  color: rgba(0,0,0,1);
+  font-family: Roboto;
+  font-weight: Regular;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 4px;
+}
+
+

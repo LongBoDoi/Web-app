@@ -3,7 +3,7 @@ body{
 	background-size: cover;
 }
 .main{
-padding: 100px 0px 50px;
+padding: 65px 0px 50px;
 	width:30%;
     margin: 0 auto;
 
@@ -15,25 +15,16 @@ padding: 100px 0px 50px;
 }
 input[type="text"]{
 	background: url(m.png)no-repeat 0px 7px;
-	padding: 12px 13px 20px 44px;
+	padding: 12px 13px 20px 0px;
     font-size: 15px;
 	color: #ffffff;
 	display: inline-block;
 	outline: none;
     border: none;
     border-bottom: 1px solid #ffffff;
-    width:87%;
+    width:97%;
 }
-input[type="password"]{
-	background: url(l.png)no-repeat 0px 7px;
-    padding: 12px 13px 20px 44px;
-	display: inline-block;
-	color: #ffffff;
-	outline: none;
-    border: none;
-    border-bottom: 1px solid #ffffff;
-    width: 87%;
-}
+
 input[type="submit"]{
 	background: #ff3366;
     color: #ffffff;
