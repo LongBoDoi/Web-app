@@ -30,18 +30,20 @@
 		<input type="text"class="tinhinput" value = "">
 		<input type="text" class="emailinput" value = "">
 		
-		<input type="button" class="capnhatbutton" value ="Cập nhật">
-		<input type="button" class="xoabutton" value="Xóa">
+		<input type="button" class="capnhatbutton" id = "capnhatb" value ="Cập nhật" style ="display: block" onclick = "clickcapnhat(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
+		<input type="button" class="xoabutton" id = "xoab" value="Xóa" style = "display: block" onclick = "clickxoa(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
+		<input type="button" class="xoabutton" id = "themb" value="Thêm" style = "display: none" onclick = "clickthem(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
 	</form>
+</br>
+<input type="button" class="add" id="add" value="Thêm cựu sinh viên" onclick="goadd()" onmouseenter="choose(this)" onmouseleave="leave(this)">
+</br>
 <table>
 	<thead>
   <tr>
     <th>Mssv</th>
     <th>Họ và tên</th>
     <th>Ngày sinh</th>
-	<th>Giới tính</th>
 	<th>Lớp</th>
-	<th>Tỉnh/Thành phố</th>
 	<th>Số điện thoại</th>
 	<th>Email</th>
     <th>Hồ sơ</th>
@@ -52,9 +54,7 @@
     <td><input type="text" id="mssv" onkeyup="myFunction(this)" title="nhap ma sv"></td>
     <td><input type="text" id="hovaten" onkeyup="myFunction(this)" title="nhap ho va ten"></td>
 	<td><input type="text" id="ngaysinh" onkeyup="myFunction(this)" title="nhap ngay sinh"></td>
-    <td><input type="text" id="gioitinh" onkeyup="myFunction(this)" title="nhap gioi tinh"></td>
 	<td><input type="text" id="lop" onkeyup="myFunction(this)" title="nhap lop"></td>
-	<td><input type="text" id="tinh" onkeyup="myFunction(this)" title="nhap tinh/thanh pho"></td>
 	<td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -67,9 +67,7 @@
     <td>16021111</td>
     <td>Nguyễn Văn A</td>
 	<td>01/01/2015</td>
-	<td>Nam</td>
     <td>K58-CLC</td>
-	<td>Hà Nôi</td>
 	<td>11111111111</td>
 	<td><a href = "email:email@gmail.com">email@gmail.com</a></td>
     <td><a href="">Info</a></td>
@@ -80,9 +78,7 @@
     <td>17022222</td>
     <td>Trần Thị B</td>
 	<td>01/01/2015</td>
-	<td>Nam</td>
     <td>K59-CLC</td>
-	<td>Bắc Giang</td>
 	<td>11111111111</td>
 	<td><a href = "gmail:email@gmail.com">email@gmail.com</a></td>
     <td><a href="">Info</a></td>
@@ -93,9 +89,7 @@
     <td>18023333</td>
     <td>Phạm Văn C</td>
 	<td>01/01/2015</td>
-	<td>Nam</td>
     <td>K60-CLC</td>
-	<td>Bắc Ninh</td>
 	<td>11111111111</td>
 	<td><a href = "email:email@gmail.com">email@gmail.com</a></td>
     <td><a href="">Info</a></td>
@@ -105,11 +99,9 @@
   
   </tbody>
 </table>
-</br></br>
-<form>
+
+
 	<input type="button" class="add" id="add" value="Thêm cựu sinh viên" onclick="goadd()" onmouseenter="chooseadd()" onmouseleave="leaveadd()">
-	<input type="button" class="delete" id="delete" value="Xóa cựu sinh viên" onclick="godelete()" onmouseenter="choosedelete()" onmouseleave="leavedelete()">
-</form>
 
 
 <script src="script.js">

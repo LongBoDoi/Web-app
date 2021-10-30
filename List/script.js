@@ -26,37 +26,40 @@
 }
 
 function goadd(){
+	document.getElementById('capnhatb').style.display = "none";
+	document.getElementById('xoab').style.display = "none";
+	document.getElementById('themb').style.display = "block";
+	document.getElementById('modi').style.display = "block";
+	clickbutton.style.border = "1px solid blue";
+}
+
+
+function choose(clickbutton){
+	clickbutton.style.cursor = "pointer";
+	clickbutton.style.border = "1px solid white";
+}
+
+function leave(clickbutton){
+	clickbutton.style.border = "0px";
+}
+
+function clickcapnhat(clickbutton) {
 	
 }
-
-function godelete(){
+function clickxoa(clickbutton) {
 	
 }
-
-function chooseadd(){
-	document.getElementById('add').style.cursor = "pointer";
-	document.getElementById('add').style.border = "2px solid white";
-}
-
-function leaveadd(){
-	document.getElementById('add').style.border = "0px";
-}
-
-function choosedelete(){
-	document.getElementById('delete').style.cursor = "pointer";
-	document.getElementById('delete').style.border = "2px solid white";
-}
-
-function leavedelete(){
-	document.getElementById('delete').style.border = "0px";
+function clickthem(clickbutton) {
 	
 }
-
 function openmodi(openid) {
-	
+	document.getElementById('capnhatb').style.display = "block";
+	document.getElementById('xoab').style.display = "block";
+	document.getElementById('themb').style.display = "none";
 	document.getElementById('modi').style.display = "block";
 }
 
 function closemodi() {
+	
 	document.getElementById('modi').style.display = "none";
 }
