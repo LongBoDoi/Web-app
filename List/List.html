@@ -7,13 +7,40 @@
 <body>
 
 <h2><center> DANH SÁCH CỰU SINH VIÊN</center></h2>
-
+<form class="modi" id = "modi" style = "display: none">
+        <input type = "button" class = "outmodi" onclick ="closemodi()" value = "x">
+		<span class="hotentext">Họ và tên</span>
+		<span class="nstext">Ngày sinh</span>
+		<span class="loptext">Lớp</span>
+		<span class="teltext">Điện thoại</span>
+		<span class="ghichutext">Ghi chú</span>
+		<span class="msvtext">Mã sinh viên</span>
+		<span class="gttext">Giới tính</span>
+		<span class="tinhtext">Tỉnh/Thành phố</span>
+		<span class="emailtext">Email</span>
+		
+		<input type="text" class="hoteninput" value = "">
+		<input type="text" class="nsinput" value = "">
+		<input type="text" class="lopinput" value = "">
+		<input type="text" class="telinput" value = "">
+		<input type="text" class="ghichuinput" value = "">
+		
+		<input type="text" class="msvinput" value = "">
+		<input type="text" class="gtinput" value = "">
+		<input type="text"class="tinhinput" value = "">
+		<input type="text" class="emailinput" value = "">
+		
+		<input type="button" class="capnhatbutton" value ="Cập nhật">
+		<input type="button" class="xoabutton" value="Xóa">
+	</form>
 <table>
 	<thead>
   <tr>
     <th>Mssv</th>
-    <th>HovaTen</th>
-    <th>Lop</th>
+    <th>Họ và tên</th>
+    <th>Ngày sinh</th>
+	<th>Giới tính</th>
+	<th>Lớp</th>
 	<th>Tỉnh/Thành phố</th>
 	<th>Số điện thoại</th>
 	<th>Email</th>
@@ -24,7 +51,9 @@
   <tr id="1">
     <td><input type="text" id="mssv" onkeyup="myFunction(this)" title="nhap ma sv"></td>
     <td><input type="text" id="hovaten" onkeyup="myFunction(this)" title="nhap ho va ten"></td>
-    <td><input type="text" id="lop" onkeyup="myFunction(this)" title="nhap lop"></td>
+	<td><input type="text" id="ngaysinh" onkeyup="myFunction(this)" title="nhap ngay sinh"></td>
+    <td><input type="text" id="gioitinh" onkeyup="myFunction(this)" title="nhap gioi tinh"></td>
+	<td><input type="text" id="lop" onkeyup="myFunction(this)" title="nhap lop"></td>
 	<td><input type="text" id="tinh" onkeyup="myFunction(this)" title="nhap tinh/thanh pho"></td>
 	<td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -34,38 +63,44 @@
   </tr>
   </thead>
   <tbody id="tbody">
-  <tr id="2">
+  <tr id="r2">
     <td>16021111</td>
     <td>Nguyễn Văn A</td>
+	<td>01/01/2015</td>
+	<td>Nam</td>
     <td>K58-CLC</td>
 	<td>Hà Nôi</td>
 	<td>11111111111</td>
 	<td><a href = "email:email@gmail.com">email@gmail.com</a></td>
     <td><a href="">Info</a></td>
 	<td>a</td>
-    <td><button><i><img src="./icon/change.png" width="15px" height="15px"></i></button></td>
+    <td><button onclick = "openmodi(this)" id ="2"><i><img src="./icon/change.png" width="15px" height="15px"></i></button></td>
   </tr>
   <tr id="3">
     <td>17022222</td>
     <td>Trần Thị B</td>
+	<td>01/01/2015</td>
+	<td>Nam</td>
     <td>K59-CLC</td>
 	<td>Bắc Giang</td>
 	<td>11111111111</td>
 	<td><a href = "gmail:email@gmail.com">email@gmail.com</a></td>
     <td><a href="">Info</a></td>
 	<td>b</td>
-    <td><button><i><img src="./icon/change.png" width="15px" height="15px"></i></button></td>
+    <td><button onclick = "openmodi(this)"><i><img src="./icon/change.png" width="15px" height="15px"></i></button></td>
   </tr>
   <tr id="4">
     <td>18023333</td>
     <td>Phạm Văn C</td>
+	<td>01/01/2015</td>
+	<td>Nam</td>
     <td>K60-CLC</td>
 	<td>Bắc Ninh</td>
 	<td>11111111111</td>
 	<td><a href = "email:email@gmail.com">email@gmail.com</a></td>
     <td><a href="">Info</a></td>
 	<td>c</td>
-    <td><button><i><img src="./icon/change.png" width="15px" height="15px"></i></button></td>
+    <td><button onclick = "openmodi(this)"><i><img src="./icon/change.png" width="15px" height="15px"></i></button></td>
   </tr>
   
   </tbody>

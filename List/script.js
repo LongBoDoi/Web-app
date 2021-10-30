@@ -7,9 +7,11 @@
   
   if (idinput.id == "mssv") idex = 0;
   else if (idinput.id == "hovaten") idex = 1;
-  else if (idinput.id == "lop") idex = 2;
-  else if (idinput.id == "tinh") idex = 3;
-  else idex = 7;
+  else if (idinput.id == "ngaysinh") idex = 2;
+  else if (idinput.id == "gioitinh") idex = 3;
+  else if (idinput.id == "lop") idex = 4;
+  else if (idinput.id == "tinh") idex = 5;
+  else idex = 9;
   for (i = 0; i < tr.length; i++) {
     td = tr[i].getElementsByTagName("td")[idex];
     if (td) {
@@ -48,4 +50,13 @@ function choosedelete(){
 function leavedelete(){
 	document.getElementById('delete').style.border = "0px";
 	
+}
+
+function openmodi(openid) {
+	
+	document.getElementById('modi').style.display = "block";
+}
+
+function closemodi() {
+	document.getElementById('modi').style.display = "none";
 }
