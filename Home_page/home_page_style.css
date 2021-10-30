@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 115vh;
+    background: url(background.jpg);
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#toolbar_canvas {
+    position: absolute;
+    width: 1920px;
+    height: 130px;
+    top: 18px;
+}
+
+#sign_up_button {
+    position: absolute;
+    top: 44px;
+    left: 1600px;
+    width: 100px;
+    height: 70px;
+    font: 20px Arial;
+    color: white;
+    border: 0px;
+}
+
+#log_in_button {
+    position: absolute;
+    top: 44px;
+    left: 1700px;
+    width: 100px;
+    height: 70px;
+    font: 20px Arial;
+    color: white;
+}
+
+.slider {
+    width: 1500px;
+    height: 700px;
+    border: 5px solid #ff3366;
+    overflow: hidden;
+}
+
+.slides {
+    width: 20%;
+    height: 700px;
+    display: flex;
+}
+
+.slides input{
+    display: none;
+}
+
+.slide {
+    width: 500%;
+    transition: 1s;
+}
+
+.slide img{
+    width: 1500px;
+    height: 700px;
+}
+
+.navigation_manual {
+    position: absolute;
+    width: 1500px;
+    margin-top: -40px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual_btn {
+    border: 3px solid #ff3366;
+    padding: 8px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.manual_btn:not(:last-child) {
+    margin-right: 60px;
+}
+
+.manual_btn:hover {
+    background: #ff3366;
+}
+
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first {
+    margin-left: -500%;
+}
+
+#radio3:checked ~ .first {
+    margin-left: -1000%;
+}
+
+#radio4:checked ~ .first {
+    margin-left: -1500%;
+}
+
+.navigation_auto {
+    position: absolute;
+    display: flex;
+    width: 1500px;
+    justify-content: center;
+    margin-top: 660px;
+}
+
+.navigation_auto div {
+    border: 3px solid #ff3366;
+    padding: 8px;
+    border-radius: 20px;
+    transition: 1s;
+}
+
+.navigation_auto div:not(:last-child) {
+    margin-right: 60px;
+}
+
+#radio1:checked ~ .navigation_auto .auto_btn_1 {
+    background: #ff3366;
+}
+
+#radio2:checked ~ .navigation_auto .auto_btn_2 {
+    background: #ff3366;
+}
+
+#radio3:checked ~ .navigation_auto .auto_btn_3 {
+    background: #ff3366;
+}
+
+#radio4:checked ~ .navigation_auto .auto_btn_4 {
+    background: #ff3366;
+}

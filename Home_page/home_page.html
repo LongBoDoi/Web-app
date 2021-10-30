@@ -3,8 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <title>Cựu sinh viên</title>
+    <link rel="stylesheet" type="text/css" href="home_page_style.css">
+    <script src="home_page_constants.js">
+    </script>
 </head>
 <body>
+    <div class="slider">
+        <div class="slides">
+            <input type="radio" name="radio_btn" id="radio1">
+            <input type="radio" name="radio_btn" id="radio2">
+            <input type="radio" name="radio_btn" id="radio3">
+            <input type="radio" name="radio_btn" id="radio4">
 
+            <div class="slide first">
+                <img src="page_image_1.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="page_image_2.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="page_image_3.jpg" alt="">
+            </div>
+            <div class="slide">
+                <img src="page_image_4.jpg" alt="">
+            </div>
+
+            <div class="navigation_auto">
+                <div class="auto_btn_1"></div>
+                <div class="auto_btn_2"></div>
+                <div class="auto_btn_3"></div>
+                <div class="auto_btn_4"></div>
+            </div>
+        </div>
+
+        <div class="navigation_manual">
+            <label for="radio1" class="manual_btn"></label>
+            <label for="radio2" class="manual_btn"></label>
+            <label for="radio3" class="manual_btn"></label>
+            <label for="radio4" class="manual_btn"></label>
+        </div>
+    </div>
+
+    <script src="home_page_script.js">
+    </script>
 </body>
 </html>
