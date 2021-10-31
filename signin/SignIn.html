@@ -12,8 +12,8 @@
 <div class="header"><h1>Đăng nhập</h1></div>	
 						
 <form>
-	<input type="text"  id ="username"  value="Tên tài khoản" name="name" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên tài khoản';}"/>
-	<input type="password" id ="password" value="Mật khẩu" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mật khẩu';}"/>
+	<input type="text"  id ="username"  value="Tên tài khoản" name="name" onfocus="thanh_focus()" onblur="if (this.value == '') {this.value = 'Tên tài khoản';}"/>
+	<input type="password" id ="password" value="Mật khẩu" name="password" onfocus="thanh_focus()" onblur="if (this.value == '') {this.value = 'Mật khẩu';}"/>
 	<p>
 	<label class="checkbox"><input type="checkbox" name="" checked="" onclick ="rememberAcc()"><i> </i>Ghi nhớ đăng nhập</label>
 						
