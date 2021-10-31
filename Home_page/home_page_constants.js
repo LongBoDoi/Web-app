@@ -18,3 +18,28 @@ log_in_button.style.borderTop = "0px";
 log_in_button.style.borderBottom = "0px";
 log_in_button.style.borderColor = '#ff3366';
 
+log_in_button.onclick = function() {
+    window.location.assign('../signin/SignIn.html');
+}
+
+sign_up_button.onclick = function() {
+    window.location.assign('../signup/SignUp.html');
+}
+
+log_in_button.onmouseenter = function() {
+    document.getElementById('log_in_button').style.cursor = "pointer";
+    document.getElementById('log_in_button').style.border = "1px solid white"
+}
+
+log_in_button.onmouseleave = function() {
+    document.getElementById('log_in_button').style.border = "0px"
+}
+
+sign_up_button.onmouseenter = function() {
+    document.getElementById('sign_up_button').style.cursor = "pointer";
+    document.getElementById('sign_up_button').style.border = "1px solid white"
+}
+
+sign_up_button.onmouseleave = function() {
+    document.getElementById('sign_up_button').style.border = "0px"
+}
