@@ -87,7 +87,7 @@ input[type="button"] {
 
 .slides {
     width: 20%;
-    height: 700px;
+    height: 100%;
     display: flex;
 }
 
@@ -102,27 +102,27 @@ input[type="button"] {
 
 .slide img{
     width: 1500px;
-    height: 700px;
+    height: 100%;
 }
 
 .navigation_manual {
     position: absolute;
-    width: 1500px;
-    margin-top: -40px;
+    width: 100%;
+    margin-top: -2.8%;
     display: flex;
     justify-content: center;
 }
 
 .manual_btn {
     border: 3px solid #ff3366;
-    padding: 8px;
-    border-radius: 20px;
+    padding: 0.54%;
+    border-radius: 100%;
     cursor: pointer;
     transition: 1s;
 }
 
 .manual_btn:not(:last-child) {
-    margin-right: 60px;
+    margin-right: 4%;
 }
 
 .manual_btn:hover {
@@ -148,20 +148,20 @@ input[type="button"] {
 .navigation_auto {
     position: absolute;
     display: flex;
-    width: 1500px;
+    width: 100%;
     justify-content: center;
-    margin-top: 660px;
+    margin-top: 44.05%;
 }
 
 .navigation_auto div {
     border: 3px solid #ff3366;
-    padding: 8px;
-    border-radius: 20px;
+    padding: 0.54%;
+    border-radius: 100%;
     transition: 1s;
 }
 
 .navigation_auto div:not(:last-child) {
-    margin-right: 60px;
+    margin-right: 4%;
 }
 
 #radio1:checked ~ .navigation_auto .auto_btn_1 {
