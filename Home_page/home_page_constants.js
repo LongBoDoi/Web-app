@@ -1,4 +1,5 @@
 const home_page_image = document.createElement('img');
+home_page_image.id = 'home_page_image';
 home_page_image.src = 'home_page_icon.png';
 
 let toolbar_canvas = document.createElement('canvas');
@@ -28,18 +29,18 @@ sign_up_button.onclick = function() {
 
 log_in_button.onmouseenter = function() {
     document.getElementById('log_in_button').style.cursor = "pointer";
-    document.getElementById('log_in_button').style.border = "1px solid white"
+    document.getElementById('log_in_button').style.border = "1px solid white";
 }
 
 log_in_button.onmouseleave = function() {
-    document.getElementById('log_in_button').style.border = "0px"
+    document.getElementById('log_in_button').style.border = "0px";
 }
 
 sign_up_button.onmouseenter = function() {
     document.getElementById('sign_up_button').style.cursor = "pointer";
-    document.getElementById('sign_up_button').style.border = "1px solid white"
+    document.getElementById('sign_up_button').style.border = "1px solid white";
 }
 
 sign_up_button.onmouseleave = function() {
-    document.getElementById('sign_up_button').style.border = "0px"
+    document.getElementById('sign_up_button').style.border = "0px";
 }
