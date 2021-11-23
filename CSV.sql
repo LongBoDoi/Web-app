@@ -1,7 +1,7 @@
-CREATE DATABASE Cuusinhvien;
-USE Cuusinhvien;
+CREATE DATABASE cuusinhvien;
+USE cuusinhvien;
 
-CREATE TABLE Taikhoan (
+CREATE TABLE taikhoan (
 	username VARCHAR(255) PRIMARY KEY,
 	password VARCHAR(255),
 	fullname VARCHAR(255),
@@ -15,7 +15,8 @@ CREATE TABLE Taikhoan (
 	achievement TEXT
 );
 
-CREATE TABLE LoaiTaiKhoan (
-	username VARCHAR(255) REFERENCES Taikhoan(username) PRIMARY KEY,
-	type VARCHAR(10)
+CREATE TABLE loaitaikhoan (
+	username VARCHAR(255) PRIMARY KEY,
+	type VARCHAR(10),
+	CONSTRAINT account_type FOREIGN KEY (username) REFERENCES Taikhoan(username) ON DELETE CASCADE
 );
