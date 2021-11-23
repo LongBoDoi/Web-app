@@ -9,19 +9,32 @@
 
 <body>
 <div class="main">
-<div class="header"><h1>Đăng ký</h1></div>	
-						
-<form>
-	<input type="text"  id ="fullname"  value="Tên của bạn" name="fullname" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên của bạn';}"/>
-	<input type="text" id ="DateOfBirth" value="Ngày sinh" name="birth" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Ngày sinh';}"/>
-	<input type="text"  id ="username"  value="Tên tài khoản" name="username" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Tên tài khoản';}"/>
-	<input type="text" id ="password" value="Mật khẩu" name="password" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Mật khẩu';}"/>
-        <input type="text" id ="confirmPass" value="Xác nhận Mật khẩu" name="confirmPass" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Xác nhận Mật khẩu';}"/>
-	<input type="text" id ="email" value="Email" name="email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Email';}"/>
-	<input type="text" id ="Phone" value="Số điện thoại" name="phone" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Số điện thoại';}"/>
-	</br></br>				 				   
-	<input type="submit" id="signup" value="Tạo tài khoản" onclick="signUp()" onmouseenter="choosesignup()">
-</form>	
+<div class="header"><h1>Đăng ký</h1></div>
+
+<form method="post" action="add_account.php">
+	<div class="fields">Họ và tên</div>
+	<input type="text"  id ="fullname" name="fullname"/>
+	<br><br>
+	<div class="fields">Tên tài khoản</div>
+	<input type="text"  id ="username" name="username"/>
+	<br><br>
+	<div class="fields">Ngày sinh</div>
+	<input type="date" id ="birth" name="birth"/>
+	<br><br>
+	<div class="fields">Mật khẩu</div>
+	<input type="password" id ="password" name="password"/>
+	<br><br>
+	<div class="fields">Xác nhận mật khẩu</div>
+	<input type="password" id ="confirmPass" name="confirmPass"/>
+	<br><br>
+	<div class="fields">Email</div>
+	<input type="text" id ="email" name="email"/>
+	<br><br>
+	<div class="fields">Số điện thoại</div>
+	<input type="text" id ="phone" name="phone"/>
+	<br><br>
+	<input type="submit" id="signup" name="submit_form" value="Tạo tài khoản" onmouseenter="choosesignup()">
+</form>
 </div>				
 
 

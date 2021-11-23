@@ -3,53 +3,51 @@ function signUp(){
 	var valueUser = document.getElementById("username").value;
 	var valuePass = document.getElementById("password").value;
     var valueconfirmPass = document.getElementById("confirmPass").value;
-    var valueEmail = document.getElementById("email").value;
-    if(valueFull == 'Tên đầy đủ'){
-		alert('Bạn phải điền Tên đầy đủ');
+    if(valueFull === ''){
+		alert('Bạn phải điền Họ và tên');
+
+		return false;
 	}
-	else{
-		if(valueFull.length < 8){
-			alert('Tên đầy đủ phải có độ dài từ 8 ký tự trở lên');
-		}
-        else{
-        	
-        }
-	}
-	if(valueUser == 'Tên tài khoản'){
+	if(valueUser === ''){
 		alert('Bạn phải điền Tên tài khoản');
+
+		return false;
 	}
 	else{
 		if(valueUser.length < 8 || valueUser.length > 32){
 			alert('Tên tài khoản phải có độ dài từ 8-32 ký tự');
+
+			return false;
 		}
-        else{
-        	
-        }
 	}
     
-    if(valuePass == 'Mật khẩu'){
+    if(valuePass === ''){
 		alert('Bạn phải điền Mật khẩu');
+
+		return false;
 	}
 	else{
 		if(valuePass.length < 8 || valuePass.length > 16){
 			alert('Mật khẩu phải có độ dài từ 8-16 ký tự');
+
+			return false;
 		}
-        else{
-        	
-        }
 	}
     
-    if(valueconfirmPass == 'Xác nhận Mật khẩu'){
+    if(valueconfirmPass === ''){
 		alert('Bạn phải xác nhận lại Mật khẩu');
+
+		return false;
 	}
 	else{
-		if(valueconfirmPass != valuePass){
+		if(valueconfirmPass !== valuePass){
 			alert('Mật khẩu không giống nhau');
+
+			return false;
 		}
-        else{
-        	
-        }
 	}
+
+	return true;
 }
 
 
