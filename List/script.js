@@ -1,28 +1,74 @@
-	function myFunction(idinput) {
-  var input, filter, table, tr, td, i, txtValue, idex;
-  input = document.getElementById(idinput.id);
-  filter = input.value.toUpperCase();
-  table = document.getElementById("tbody");
-  tr = table.getElementsByTagName("tr");
-  
-  if (idinput.id == "mssv") idex = 0;
-  else if (idinput.id == "hovaten") idex = 1;
-  else if (idinput.id == "ngaysinh") idex = 2;
-  else if (idinput.id == "gioitinh") idex = 3;
-  else if (idinput.id == "lop") idex = 4;
-  else if (idinput.id == "tinh") idex = 5;
-  else idex = 9;
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td")[idex];
-    if (td) {
-      txtValue = td.textContent || td.innerText;
-      if (txtValue.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
-      }
-    }       
-  }
+	function myFunction() {
+  var tbody = document.querySelector("#tbody");
+  tbody.innerHTML = "";
+  var getText = document.getElementById(this.id).ariaValueText;
+  var xhttp = new XMLHttpRequest();
+				xhttp.onreadystatechange = function() {
+					if (this.readyState == 4 && this.status == 200) {
+						var arr= JSON.parse(this.responseText);
+						for (var i=0;i<arr.length;i++) {
+							var trow= document.createElement('tr');
+							var stttd= document.createElement('td');
+							stttd.innerHTML=i+1;
+							var masvtd= document.createElement('td');
+							masvtd.innerHTML= arr[i]['id'];
+							var tencsvtd= document.createElement('td');
+							tencsvtd.innerHTML= arr[i]['fullname'];
+							var ngaysinhtd= document.createElement('td');
+							ngaysinhtd.innerHTML= arr[i]['date_of_birth'];
+              var phonetd = document.createElement('td');
+              phonetd.innerHTML = arr[i]['phone'];
+              var emailtd = document.createElement('td');
+              emailtd.innerHTML = arr[i]['email'];
+              var hosotd = document.createElement('td');
+              var linkhoso = document.createElement('a');
+              linkhoso.innerHTML = "Info";
+              linkhoso.href = "../Profile/Profile.html";
+              hosotd.appendChild(linkhoso);
+              var ghichutd = document.createElement('td');
+              ghichutd.innerHTML = arr[i]['achievement'];
+              var moditd = document.createElement('td');
+              var modibtn = document.createElement('button');
+              modibtn.id = i;
+              modibtn.onclick = "openmodi(this)";
+              var iconbtn = document.createElement('i');
+              var imgbtn = document.createElement('img');
+              imgbtn.src = "./icon/change.png";
+              imgbtn.width = "15px";
+              imgbtn.height = "15px";
+
+              iconbtn.appendChild(imgbtn);
+              modibtn.appendChild(iconbtn);
+              moditd.appendChild(modibtn);
+
+							trow.appendChild(stttd);
+              trow.appendChild(masvtd);
+              trow.appendChild(tencsvtd);
+              trow.appendChild(ngaysinhtd);
+              trow.appendChild(phonetd);
+              trow.appendChild(emailtd);
+              trow.appendChild(hosotd);
+              trow.appendChild(moditd);
+							document.querySelector('#tb1 tbody').appendChild(trow);
+						}
+						var note=document.getElementById('note_data');
+						if (arr.length==0) note.innerHTML="Khong tim thay ban ghi nao thoa man!";
+						else note.innerHTML="";
+					}
+				}
+        if (this.id == "mssv") {
+        var mssvText = document.getElementById('mssv').ariaValueText;
+				xhttp.open("GET", "searchMSV.php?mssv="+mssvText, true);
+				xhttp.send(null);
+        } else if (this.id == "hovaten") {
+        var fullname = document.getElementById('hovaten').ariaValueText;
+        xhttp.open("GET", "searchName.php?fullname="+fullname, true);
+				xhttp.send(null);
+        } else if (this.id == "ghichu") {
+          var achievement = document.getElementById('ghichu').ariaValueText;
+          xhttp.open("GET", "searchAchi.php?achievement="+achievement, true);
+				  xhttp.send(null);
+        }
 }
 
 function goadd(){

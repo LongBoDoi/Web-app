@@ -7,11 +7,6 @@ table {
   position: center;
   
 }
-body{
-	background: url(background.jpg);
-  background-size: cover;
-}
-
 tbody {
   background: none;
   
@@ -68,11 +63,12 @@ thead {
   overflow: hidden;
 }
 .outmodi {
+  text-align: center;
 	color: red;
 	border: 1px solid blue;
 	position: absolute;
-	right: 5px;
-	top: 5px;
+	right: 2px;
+	top: 2px;
 }
 .hotentext {
   width: 68px;
@@ -401,5 +397,6 @@ thead {
   text-align: center;
   padding-top: 4px;
 }
+
 
 

@@ -3,44 +3,20 @@
 <head>
 <meta charset="utf-8">
 <link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style2.css">
 
 </head>
 <body>
-
-<h2><center> DANH SÁCH CỰU SINH VIÊN</center></h2>
-<form class="modi" id = "modi" style = "display: none">
-        <input type = "button" class = "outmodi" onclick ="closemodi()" value = "x">
-		<span class="hotentext">Họ và tên</span>
-		<span class="nstext">Ngày sinh</span>
-		<span class="loptext">Lớp</span>
-		<span class="teltext">Điện thoại</span>
-		<span class="ghichutext">Ghi chú</span>
-		<span class="msvtext">Mã sinh viên</span>
-		<span class="gttext">Giới tính</span>
-		<span class="tinhtext">Tỉnh/Thành phố</span>
-		<span class="emailtext">Email</span>
-		
-		<input type="text" class="hoteninput" value = "">
-		<input type="text" class="nsinput" value = "">
-		<input type="text" class="lopinput" value = "">
-		<input type="text" class="telinput" value = "">
-		<input type="text" class="ghichuinput" value = "">
-		
-		<input type="text" class="msvinput" value = "">
-		<input type="text" class="gtinput" value = "">
-		<input type="text"class="tinhinput" value = "">
-		<input type="text" class="emailinput" value = "">
-		
-		<input type="button" class="capnhatbutton" id = "capnhatb" value ="Cập nhật" style ="display: block" onclick = "clickcapnhat(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
-		<input type="button" class="xoabutton" id = "xoab" value="Xóa" style = "display: block" onclick = "clickxoa(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
-		<input type="button" class="xoabutton" id = "themb" value="Thêm" style = "display: none" onclick = "clickthem(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
-	</form>
-</br>
-<input type="button" class="add" id="add" value="Thêm cựu sinh viên" onclick="goadd()" onmouseenter="choose(this)" onmouseleave="leave(this)">
-</br>
+<div class="header-01">
+	<h1>Website Quản Lý Cựu Sinh Viên </br> </h1>
+</div>
+<form>
+<input type="button" class="add" id="add" value="Add" onclick="goadd()" onmouseenter="choose(this)" onmouseleave="leave(this)">
+</br> </br>
 <table>
 	<thead>
   <tr>
+	<th></th>
     <th>Mssv</th>
     <th>Họ và tên</th>
     <th>Ngày sinh</th>
@@ -52,10 +28,11 @@
     <th>Sửa</th>
   </tr>
   <tr id="1">
-    <td><input type="text" id="mssv" onkeyup="myFunction(this)" title="nhap ma sv"></td>
-    <td><input type="text" id="hovaten" onkeyup="myFunction(this)" title="nhap ho va ten"></td>
-	<td><input type="text" id="ngaysinh" onkeyup="myFunction(this)" title="nhap ngay sinh"></td>
-	<td><input type="text" id="lop" onkeyup="myFunction(this)" title="nhap lop"></td>
+	<td>STT</td>
+    <td><input type="text" id="mssv" onkeyup="myFunction(this)" title="nhập mã sinh viên"></td>
+    <td><input type="text" id="hovaten" onkeyup="myFunction(this)" title="nhập đầy đủ họ và tên"></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
 	<td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -64,49 +41,43 @@
   </tr>
   </thead>
   <tbody id="tbody">
-  <tr id="r2">
-    <td>16021111</td>
-    <td>Nguyễn Văn A</td>
-	<td>01/01/2015</td>
-    <td>K58-CLC</td>
-	<td>11111111111</td>
-	<td><a href = "email:email@gmail.com">email@gmail.com</a></td>
-    <td><a href="">Info</a></td>
-	<td>a</td>
-    <td><button onclick = "openmodi(this)" id ="2"><i><img src="./icon/change.png" width="15px" height="15px"></i></button></td>
-  </tr>
-  <tr id="3">
-    <td>17022222</td>
-    <td>Trần Thị B</td>
-	<td>01/01/2015</td>
-    <td>K59-CLC</td>
-	<td>11111111111</td>
-	<td><a href = "gmail:email@gmail.com">email@gmail.com</a></td>
-    <td><a href="">Info</a></td>
-	<td>b</td>
-    <td><button onclick = "openmodi(this)"><i><img src="./icon/change.png" width="15px" height="15px"></i></button></td>
-  </tr>
-  <tr id="4">
-    <td>18023333</td>
-    <td>Phạm Văn C</td>
-	<td>01/01/2015</td>
-    <td>K60-CLC</td>
-	<td>11111111111</td>
-	<td><a href = "email:email@gmail.com">email@gmail.com</a></td>
-    <td><a href="">Info</a></td>
-	<td>c</td>
-    <td><button onclick = "openmodi(this)"><i><img src="./icon/change.png" width="15px" height="15px"></i></button></td>
-  </tr>
-  
   </tbody>
+
 </table>
-
-
-	<input type="button" class="add" id="add" value="Thêm cựu sinh viên" onclick="goadd()" onmouseenter="chooseadd()" onmouseleave="leaveadd()">
-
+<span id = "note-data"></span>
+</form>
+<form class="modi" id = "modi" style = "display: none">
+	<button class = "outmodi" onclick="closemodi()">X</button>
+	<span class="hotentext">Họ và tên</span>
+	<span class="nstext">Ngày sinh</span>
+	<span class="loptext">Lớp</span>
+	<span class="teltext">Điện thoại</span>
+	<span class="ghichutext">Ghi chú</span>
+	<span class="msvtext">Mã sinh viên</span>
+	<span class="gttext">Giới tính</span>
+	<span class="tinhtext">Tỉnh/Thành phố</span>
+	<span class="emailtext">Email</span>
+	
+	<input type="text" class="hoteninput" value = "">
+	<input type="text" class="nsinput" value = "">
+	<input type="text" class="lopinput" value = "">
+	<input type="text" class="telinput" value = "">
+	<input type="text" class="ghichuinput" value = "">
+	
+	<input type="text" class="msvinput" value = "">
+	<input type="text" class="gtinput" value = "">
+	<input type="text"class="tinhinput" value = "">
+	<input type="text" class="emailinput" value = "">
+	
+	<input type="button" class="capnhatbutton" id = "capnhatb" value ="Cập nhật" style ="display: block" onclick = "clickcapnhat(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
+	<input type="button" class="xoabutton" id = "xoab" value="Xóa" style = "display: block" onclick = "clickxoa(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
+	<input type="button" class="xoabutton" id = "themb" value="Thêm" style = "display: none" onclick = "clickthem(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
+</form>
 
 <script src="script.js">
-
+</script>
+<script src="script2.js">
+	</script>
 </script>
 </body>
 </html>
