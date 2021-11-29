@@ -19,6 +19,13 @@
 ?>
 
 <script type="text/javascript">
-	window.alert('Đăng nhập thành công');
-    	window.location.assign('../Main/main.html');
+    var log_in = '<?=$result->num_rows?>';
+    if (log_in == 1) {
+        window.localStorage.setItem('username', '<?=$username?>');
+        window.alert('Đăng nhập thành công');
+        window.location.assign('../Main/main.html');
+    } else {
+        window.location.assign('SignIn.html');
+        window.alert('Tên tài khoản hoặc mật khẩu không chính xác');
+    }
 </script>

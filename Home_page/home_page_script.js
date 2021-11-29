@@ -1,4 +1,7 @@
 window.onload = function () {
+    let log_in = window.localStorage.getItem("username");
+    window.alert('sign in di');
+
     document.body.appendChild(toolbar_canvas)
     toolbar_context.fillStyle = 'rgba(105, 105, 105, 0.8)';
     toolbar_context.fillRect(0, 0, toolbar_canvas.offsetWidth, toolbar_canvas.offsetHeight);
@@ -9,7 +12,6 @@ window.onload = function () {
     document.body.appendChild(log_in_button);
 
     document.getElementById('radio1').checked = true;
-    
 }
 
 let counter = 2;

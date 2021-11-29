@@ -20,3 +20,7 @@ function signIn(){
 function choose_sign_in(){
     document.getElementById('sign_in').style.cursor = "pointer";
 }
+
+window.onload = function () {
+    window.alert('sign in di');
+}
