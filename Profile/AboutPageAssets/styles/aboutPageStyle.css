@@ -6,10 +6,11 @@ body {
 	background-size: cover;
 	margin-left: auto;
 	margin-right: auto;
-	width: 92%;
-	max-width: 960px;
-	padding-left: 2.275%;
-	padding-right: 2.275%;	
+	width: 150vh;
+	height: 100vh;
+	padding-left: 12%;
+	padding-right: 12%;
+	padding-top: 15%;
 }
 /* Header */
 header {
@@ -399,4 +400,71 @@ footer .footerNote {
 	margin-right: 3%;
 	font-family: sans-serif;
 }
+}
+
+.header {
+	background-color: transparent;
+	color: #ffffff;
+	padding: 20px;
+	text-align: left;
+}
+
+.header-01{
+	position: absolute;
+	top: 10%;
+	left: 37%;
+	float: left;
+	font: 35px "Times New Roman";
+	color: #ff3366;
+}
+
+.menu {
+	overflow: hidden;
+	background-color: transparent;
+}
+
+
+input[type="button"] {
+	background: transparent;
+	border: none;
+	float: left;
+	display: block;
+	color: #ffffff;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+#user_img {
+	position: absolute;
+	left: 90%;
+	top: 3.8%;
+	height: 7.5%;
+}
+
+#toolbar_canvas {
+	position: absolute;
+	width: 100%;
+	height: 11%;
+	top: 3.8%;
+	margin-left: -12%;
+}
+
+#home_page_image {
+	position: absolute;
+	top: 2.5%;
+	left: 5%;
+	width: 15%;
+	height: 10%;
+}
+
+.toolbar_button {
+	position: absolute;
+	top: 3.8%;
+	height: 7.5%;
+	font: 30px Arial;
+	color: white;
+	background-color: transparent;
+	border: 0;
+	transition: 0.4s;
 }

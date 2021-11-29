@@ -9,10 +9,16 @@ home_page_image.src = 'home_page_icon.png';
 const user_image = document.createElement('img');
 user_image.id = 'user_img';
 user_image.src = 'https://courses.uet.vnu.edu.vn/theme/image.php/lambda/core/1635321604/u/f1';
+user_image.addEventListener('click', function (e) {
+	window.location.assign('../Profile/Profile.html');
+});
+user_image.addEventListener('mouseenter', function (e) {
+	user_image.style.cursor = "pointer";
+});
 
 const toolbar_button_names = ['Trang chủ', 'Danh sách sinh viên', 'Thông báo', 'Diễn đàn chung', 'Sự kiện'];
 const toolbar_button_left = ['24%', '33%', '49.1%', '58.5%', '71.5%'];
-const toolbar_button_links = ['main.html', '../List/List.html', '', '', ''];
+const toolbar_button_links = ['../Main/main.html', '../List/List.html', '', '', ''];
 toolbar_buttons = [];
 for (let i = 0; i < toolbar_button_names.length; i++) {
 	let btn = document.createElement('button');

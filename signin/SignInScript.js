@@ -22,5 +22,8 @@ function choose_sign_in(){
 }
 
 window.onload = function () {
-    window.alert('sign in di');
+    let log_in = window.sessionStorage.getItem("username");
+    if (log_in !== null) {
+        window.location.assign('../Main/main.html');
+    }
 }

@@ -1,6 +1,9 @@
 window.onload = function () {
-    let log_in = window.localStorage.getItem("username");
-    window.alert('sign in di');
+    let log_in = window.sessionStorage.getItem("username");
+    if (log_in !== null) {
+        window.location.assign('../Main/main.html');
+        return;
+    }
 
     document.body.appendChild(toolbar_canvas)
     toolbar_context.fillStyle = 'rgba(105, 105, 105, 0.8)';

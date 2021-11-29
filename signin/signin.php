@@ -21,7 +21,7 @@
 <script type="text/javascript">
     var log_in = '<?=$result->num_rows?>';
     if (log_in == 1) {
-        window.localStorage.setItem('username', '<?=$username?>');
+        window.sessionStorage.setItem('username', '<?=$username?>');
         window.alert('Đăng nhập thành công');
         window.location.assign('../Main/main.html');
     } else {
