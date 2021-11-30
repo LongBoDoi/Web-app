@@ -10,7 +10,7 @@ const user_image = document.createElement('img');
 user_image.id = 'user_img';
 user_image.src = 'https://courses.uet.vnu.edu.vn/theme/image.php/lambda/core/1635321604/u/f1';
 user_image.addEventListener('click', function (e) {
-    window.location.assign('../Profile/Profile.html');
+    window.location.assign('../Profile/Profile.php');
 });
 user_image.addEventListener('mouseenter', function (e) {
     user_image.style.cursor = "pointer";
