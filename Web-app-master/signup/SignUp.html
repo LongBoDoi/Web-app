@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Đăng ký</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+
+<body>
+<div class="main">
+<div class="header"><h1>Đăng ký</h1></div>
+
+<form method="post" action="add_account.php" onsubmit="return signUp();">
+	<div class="fields">Họ và tên</div>
+	<input type="text"  id ="fullname" name="fullname"/>
+	<br><br>
+	<div class="fields">Tên tài khoản</div>
+	<input type="text"  id ="username" name="username"/>
+	<br><br>
+	<div class="fields">Mật khẩu</div>
+	<input type="password" id ="password" name="password"/>
+	<br><br>
+	<div class="fields">Xác nhận mật khẩu</div>
+	<input type="password" id ="confirmPass" name="confirmPass"/>
+	<br><br>
+	<div class="fields">Ngày sinh</div>
+	<input type="date" id ="birth" name="birth"/>
+	<br><br>
+	<div class="fields">Khoá</div>
+	<input type="text" id ="grade" name="grade"/>
+	<br><br>
+	<div class="fields">Email</div>
+	<input type="text" id ="email" name="email"/>
+	<br><br>
+	<div class="fields">Số điện thoại</div>
+	<input type="text" id ="phone" name="phone"/>
+	<br><br>
+	<input type="submit" id="sign_up" name="submit_form" value="Tạo tài khoản" onmouseenter="choose_sign_up()">
+	<p class="fields">Bạn đã có tài khoản<p>
+	<input type="button" id="sign_in" value="Đăng nhập" onmouseenter="choose_sign_in()" onclick="go_sign_in()">
+</form>
+</div>				
+
+
+</body>
+<script src="script.js"></script>
+</html>

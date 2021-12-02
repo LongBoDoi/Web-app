@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="../Main/toolbar_style.css">
+
+</head>
+<body>
+<div class="header-01">
+	<h1>Danh sách sinh viên</br> </h1>
+</div>
+<form>
+<input type="button" class="add" id="add" value="Add" onclick="goadd()" onmouseenter="choose(this)" onmouseleave="leave(this)">
+</br> </br>
+<table>
+	<thead>
+  <tr>
+	<th></th>
+    <th>Mssv</th>
+    <th>Họ và tên</th>
+    <th>Ngày sinh</th>
+	<th>Lớp</th>
+	<th>Số điện thoại</th>
+	<th>Email</th>
+    <th>Hồ sơ</th>
+	<th>Ghi chú</th>
+    <th>Sửa</th>
+  </tr>
+  <tr id="1">
+	<td>STT</td>
+    <td><input type="text" id="mssv" onkeyup="myFunction(this)" title="nhập mã sinh viên"></td>
+    <td><input type="text" id="hovaten" onkeyup="myFunction(this)" title="nhập đầy đủ họ và tên"></td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+	<td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+	<td><input type="text" id="ghichu" onkeyup="myFunction(this)" title="nhap ghi chu"></td>
+    <td>&nbsp;</td>
+  </tr>
+  </thead>
+  <tbody id="tbody">
+  </tbody>
+
+</table>
+<span id = "note-data"></span>
+</form>
+<form class="modi" id = "modi" style = "display: none">
+	<button class = "outmodi" onclick="closemodi()">X</button>
+	<span class="hotentext">Họ và tên</span>
+	<span class="nstext">Ngày sinh</span>
+	<span class="loptext">Lớp</span>
+	<span class="teltext">Điện thoại</span>
+	<span class="ghichutext">Ghi chú</span>
+	<span class="msvtext">Mã sinh viên</span>
+	<span class="gttext">Giới tính</span>
+	<span class="tinhtext">Tỉnh/Thành phố</span>
+	<span class="emailtext">Email</span>
+	
+	<input type="text" class="hoteninput" value = "">
+	<input type="text" class="nsinput" value = "">
+	<input type="text" class="lopinput" value = "">
+	<input type="text" class="telinput" value = "">
+	<input type="text" class="ghichuinput" value = "">
+	
+	<input type="text" class="msvinput" value = "">
+	<input type="text" class="gtinput" value = "">
+	<input type="text"class="tinhinput" value = "">
+	<input type="text" class="emailinput" value = "">
+	
+	<input type="button" class="capnhatbutton" id = "capnhatb" value ="Cập nhật" style ="display: block" onclick = "clickcapnhat(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
+	<input type="button" class="xoabutton" id = "xoab" value="Xóa" style = "display: block" onclick = "clickxoa(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
+	<input type="button" class="xoabutton" id = "themb" value="Thêm" style = "display: none" onclick = "clickthem(this)" onmouseenter="choose(this)" onmouseleave="leave(this)">
+</form>
+
+<script src="script.js">
+</script>
+<script src="../Main/script.js">
+	</script>
+</script>
+</body>
+</html>
+
+
