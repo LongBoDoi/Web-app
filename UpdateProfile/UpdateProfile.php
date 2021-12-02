@@ -34,7 +34,7 @@
 </head>
 
 <body>
-<form>
+<form method='post' action='update_info.php'>
 <!-- Header content -->
 <header>
   <div class="header-01"><h1>Thông tin cá nhân</h1></div>
@@ -72,14 +72,19 @@
     <!-- First Title & company details  -->
     <div class="section1Content">
 		<p><span>Họ và Tên :</span> <?=$info[2]?></p>
-        <p><span>Ngày sinh :</span> <input type='date' class='info_for_update' name='address_update' value='<?=$info[4]?>'></p>
-        <p><span>Giới tính :</span> <input type='text' class='info_for_update' name='address_update' value='<?=$info[5]?>'></p>
+        <p><span>Ngày sinh :</span> <input type='date' class='info_for_update' name='birth_update' value='<?=$info[4]?>'></p>
+        <p><span>Giới tính :</span> <select class='info_for_update' name='gender_update'>
+                                        <option value="Nam">Nam</option>
+                                        <option value="Nữ">Nữ</option>
+                                    </select>
+        </p>
         <p><span>Thành tựu :</span> <?=$info[10]?></p>
 	</div>
     <!-- Replicate the above Div block to add more title and company details --> 
   </section>
 
-    <input type='submit' class='choice' id='update_button' name='update_submit' value='LƯU'>
+    <input type='hidden' id='cancel_update_usn_2' name='username_info'>
+    <input type='submit' id='update_button' name='update_submit' value='LƯU'>
 </section>
 </form>
 

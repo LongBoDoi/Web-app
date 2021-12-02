@@ -5,7 +5,7 @@ CREATE TABLE taikhoan (
 	username VARCHAR(255) PRIMARY KEY,
 	password VARCHAR(255),
 	fullname VARCHAR(255),
-	grade VARCHAR(10),
+	grade VARCHAR(100),
 	date_of_birth DATE,
 	gender VARCHAR(10),
 	email VARCHAR(100),
