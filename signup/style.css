@@ -60,6 +60,17 @@ input[type="submit"]{
 	height: 50px;
 	font: 25px white;
 }
+input[type="button"]{
+	background: #ff3366;
+    color: #ffffff;
+	display: inline-block;
+	outline: none;
+    border: none;
+    border-radius: 3px;
+	width: 100%;
+	height: 50px;
+	font: 25px white;
+}
 .checkbox{
 	color: #ffffff;
 }
@@ -70,4 +81,5 @@ input[type="submit"]{
 
 .fields {
 	font: 20px white;
+	color:#ffffff;
 }

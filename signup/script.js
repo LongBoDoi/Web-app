@@ -58,6 +58,14 @@ function signUp(){
 }
 
 
-function choosesignup(){
-	document.getElementById('signup').style.cursor = "pointer";
+function choose_sign_up(){
+	document.getElementById('sign_up').style.cursor = "pointer";
+}
+
+function choose_sign_in(){
+	document.getElementById('sign_in').style.cursor = "pointer";
+}
+
+function go_sign_in(){
+	window.location.assign('../signin/SignIn.html');
 }
