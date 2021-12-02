@@ -378,16 +378,23 @@ header .socialNetworkNavBar .socialNetworkNav {
 	margin-left: 26%;
 	font-family: sans-serif;
 }
-.mainContent .externalResourcesNav {
-	margin-top: 40px;
-	margin-bottom: 40px;
-	text-align: center;
-	padding-top: 0px;
-	clear: both;
+#cancel_button {
+	position: absolute;
+	background: gray;
+	margin-left: 30%;
+	width: 7.5%;
+	height: 8%;
+	top: 115%;
+	font: 20px white;
 }
-.mainContent .externalResourcesNav .externalResources {
-	width: 199px;
-	height: 48px;
+#update_button {
+	position: absolute;
+	background: #ff3366;
+	margin-left: 40%;
+	width: 7.5%;
+	height: 8%;
+	top: 115%;
+	font: 20px white;
 }
 /* Footer */
 footer .footerDisclaimer {

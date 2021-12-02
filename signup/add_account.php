@@ -3,6 +3,7 @@
 		$password = $_POST['password'];
 		$fullname = $_POST['fullname'];
 		$dateofbirth = $_POST['birth'];
+		$grade = $_POST['grade'];
 		$email = $_POST['email'];
 		$phone = $_POST['phone'];
 		$username2 = $_POST['username'];
@@ -11,9 +12,9 @@
 		if ($conn->connect_error) {
 			die('Connection Failed : '.$conn->connect_error);
 		} else {
-			$stmt = $conn->prepare("INSERT INTO taikhoan(username, password, fullname, date_of_birth, email, phone)
-				VALUES(?, ?, ?, ?, ?, ?);");
-			$stmt->bind_param("ssssss", $username, $password, $fullname, $dateofbirth, $email, $phone);
+			$stmt = $conn->prepare("INSERT INTO taikhoan(username, password, fullname, grade, date_of_birth, email, phone)
+				VALUES(?, ?, ?, ?, ?, ?, ?);");
+			$stmt->bind_param("sssssss", $username, $password, $fullname, $grade, $dateofbirth, $email, $phone);
 			$stmt->execute();
 			$stmt->close();
 			$stmt = $conn->prepare("INSERT INTO loaitaikhoan(username, type)

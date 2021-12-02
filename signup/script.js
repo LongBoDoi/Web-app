@@ -3,6 +3,7 @@ function signUp(){
 	var valueUser = document.getElementById("username").value;
 	var valuePass = document.getElementById("password").value;
     var valueconfirmPass = document.getElementById("confirmPass").value;
+	var grade = document.getElementById("grade").value;
     if(valueFull === ''){
 		alert('Bạn phải điền Họ và tên');
 
@@ -45,6 +46,12 @@ function signUp(){
 
 			return false;
 		}
+	}
+
+	if(grade === ''){
+		alert('Bạn phải điền Khoá học');
+
+		return false;
 	}
 
 	return true;
