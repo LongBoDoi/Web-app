@@ -1,3 +1,23 @@
+body {
+  background : url(background.jpg);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.header-01{
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  float: left;
+  font: 35px "Times New Roman";
+  color: #ff3366;
+}
+
 h2{
 	color:#ffffff;
 }

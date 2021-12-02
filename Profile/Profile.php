@@ -1,5 +1,24 @@
 <?php
-  $first = "hello";
+    $conn = new mysqli('localhost','root','','cuusinhvien');
+    $username = $_GET['username_info'];
+    if ($conn->connect_error) {
+        die('Connection Failed : '.$conn->connect_error);
+    } else {
+        $stmt = $conn->prepare("SELECT *
+                    FROM taikhoan
+                    WHERE username=?");
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $info = $result->fetch_array(MYSQLI_NUM);
+        for ($i = 0; $i < 11; $i++) {
+            if ($info[$i] == "") {
+                $info[$i] = "___________";
+            }
+        };
+        $stmt->close();
+        $conn->close();
+    }
 ?>
 
 <!doctype html>
@@ -9,6 +28,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Profile</title>
 <link href="AboutPageAssets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css">
+<link href="../Main/toolbar_style.css" rel="stylesheet" type="text/css">
 
 <!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
 <script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
@@ -23,8 +43,8 @@
     <img src="AboutPageAssets/images/profilephoto.png" alt="sample"> </div>
   <!-- Identity details -->
   <section class="profileHeader">
-    <h1><?=$first?></h1>
-    <h3>Cựu sinh viên khoá ... Đại học Công nghệ, ĐHQGHN</h3>
+    <h1><?=$info[2]?></h1>
+    <h3>Cựu sinh viên khoá <?=$info[3]?> Đại học Công nghệ, ĐHQGHN</h3>
     <hr>
     
   </section>
@@ -38,10 +58,10 @@
     <hr class="sectionTitleRule">
     <hr class="sectionTitleRule2">
     <div class="section1Content">
-      <p><span>Email :</span> nguyenvana@gmail.com</p>
-      <p><span>Website :</span> None</p>
-      <p><span>Phone :</span> 09** *** ***</p>
-      <p><span>Address :</span> Ha Noi, Viet Nam</p>
+      <p><span>Email :</span> <?=$info[6]?></p>
+      <p><span>Website :</span> <?=$info[7]?></p>
+      <p><span>Phone :</span> <?=$info[8]?></p>
+      <p><span>Address :</span> <?=$info[9]?></p>
     </div>
   </section>
   <!-- Previous experience details -->
@@ -51,10 +71,10 @@
     <hr class="sectionTitleRule2">
     <!-- First Title & company details  -->
     <div class="section1Content">
-		<p><span>Họ và Tên :</span> Nguyễn Văn A</p>
-		<p><span>Năm sinh :</span> 19**</p>
-		<p><span>Giới tính :</span> Nam</p>
-		<p><span>Thành tựu :</span> Trung bình GPA 4 năm học > 3.5.</p>
+		<p><span>Họ và Tên :</span> <?=$info[2]?></p>
+		<p><span>Ngày sinh :</span> <?=$info[4]?></p>
+		<p><span>Giới tính :</span> <?=$info[5]?></p>
+		<p><span>Thành tựu :</span> <?=$info[10]?></p>
 	</div>
     <!-- Replicate the above Div block to add more title and company details --> 
   </section>
@@ -66,6 +86,6 @@
   </aside>
 </section>
 
-<script src="AboutPageAssets/script/ProfileScript.js"></script>
+<script src="../Main/script.js"></script>
 </body>
 </html>

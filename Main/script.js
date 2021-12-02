@@ -6,15 +6,22 @@ const home_page_image = document.createElement('img');
 home_page_image.id = 'home_page_image';
 home_page_image.src = 'home_page_icon.png';
 
-const user_image = document.createElement('img');
-user_image.id = 'user_img';
-user_image.src = 'https://courses.uet.vnu.edu.vn/theme/image.php/lambda/core/1635321604/u/f1';
-user_image.addEventListener('click', function (e) {
-	window.location.assign('../Profile/Profile.php');
-});
-user_image.addEventListener('mouseenter', function (e) {
-	user_image.style.cursor = "pointer";
-});
+let profile_form = document.createElement('form');
+profile_form.method = 'get';
+profile_form.action = '../Profile/Profile.php';
+let username_info = document.createElement('input');
+username_info.type = 'hidden';
+username_info.value = window.sessionStorage.getItem('username');
+username_info.name = 'username_info';
+let profile_submit = document.createElement('input');
+profile_submit.type = 'submit';
+profile_submit.id = 'submit';
+profile_submit.value = "";
+profile_submit.onmouseenter = function () {
+	profile_submit.style.cursor = 'pointer';
+};
+profile_form.appendChild(username_info);
+profile_form.appendChild(profile_submit);
 
 const toolbar_button_names = ['Trang chủ', 'Danh sách sinh viên', 'Thông báo', 'Diễn đàn chung', 'Sự kiện'];
 const toolbar_button_left = ['24%', '33%', '49.1%', '58.5%', '71.5%'];
@@ -47,18 +54,9 @@ window.onload = function () {
 	toolbar_context.fillRect(0, 0, toolbar_canvas.offsetWidth, toolbar_canvas.offsetHeight);
 
 	document.body.appendChild(home_page_image);
-	document.body.appendChild(user_image);
+	document.body.appendChild(profile_form);
 
 	for (let i = 0; i < toolbar_buttons.length; i++) {
 		document.body.appendChild(toolbar_buttons[i]);
 	}
 }
-
-let counter = 2;
-setInterval(function () {
-	document.getElementById('radio' + counter).checked = true;
-	counter++;
-	if (counter > 4) {
-		counter = 1;
-	}
-}, 5000);
