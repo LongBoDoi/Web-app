@@ -6,6 +6,9 @@ body{
 padding: 65px 0px 50px;
 	width:30%;
     margin: 0 auto;
+	float:left;
+	position: relative;
+	left: 34%;
 
 }
 .header{
@@ -61,7 +64,7 @@ input[type="submit"]{
 	font: 25px white;
 }
 input[type="button"]{
-	background: #ff3366;
+	background: none;
     color: #ffffff;
 	display: inline-block;
 	outline: none;
@@ -70,6 +73,7 @@ input[type="button"]{
 	width: 100%;
 	height: 50px;
 	font: 25px white;
+	text-decoration: underline #ffffff solid;
 }
 .checkbox{
 	color: #ffffff;
@@ -82,4 +86,20 @@ input[type="button"]{
 .fields {
 	font: 20px white;
 	color:#ffffff;
+}
+.other{
+	float: right;
+	width:30%;
+}
+.other1{
+	padding: 20px 0px 50px;
+	font: 20px white;
+    	color: #ffffff;
+	float:left;
+}
+.other2{
+	padding: 5px 0px 50px;
+	float:right;
+	position: relative;
+	right:34%;
 }
