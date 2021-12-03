@@ -1,0 +1,200 @@
+/* global */
+*{
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 14px;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+a {
+    color: #ff3366;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+h1 {
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+/* Forum.html */
+.container {
+    margin: 20px;
+    padding: 20px;
+}
+
+.sub_forum {
+    margin-top: 20px;
+}
+
+.sub_forum_title {
+    background-color: gray;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 4px;
+}
+
+.sub_forum_description *{
+    margin-block: 0;
+}
+
+.sub_forum_row {
+    display: grid;
+    grid-template-columns: 7% 60% 13% 20%;
+}
+
+.sub_forum_column {
+    padding: 10px;
+    margin: 4px;
+    border-radius: 5px;
+    background-color: black;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub_forum_icon i{
+    font-size: 45px;
+}
+
+/*#####################################################*/
+/* Post.html */
+
+.table_head {
+    display: flex;
+}
+
+.table_head div {
+    padding: 5px;
+    margin: 3px;
+    background-color: gray;
+    font-weight: bold;
+}
+
+.table_head .status {
+    flex: 5%;
+}
+
+.table_head .subjects {
+    flex: 70%;
+}
+
+.table_head .replies {
+    flex: 10%;
+}
+
+.table_head .last_reply {
+    flex: 15%;
+}
+
+/* Table body */
+.table_row {
+    display: flex;
+}
+
+.table_row .status, .table_row .subjects, .table_row .replies, .table_row .last_reply {
+    padding: 5px;
+    margin: 3px;
+    background-color: black;
+}
+
+.table_row .status {
+    flex: 5%;
+    font-size: 30px;
+    text-align: center;
+}
+
+.table_row .subjects {
+    flex: 70%;
+}
+
+.table_row .replies {
+    flex: 10%;
+}
+
+.table_row .last_reply {
+    flex: 15%;
+}
+
+/* Pagination */
+.pagination {
+    padding: 20px;
+    font-size: 15px;
+}
+
+.pagination a {
+    margin-inline: 5px;
+    padding: 5px 10px;
+    border: solid 0.5px white;
+}
+
+.pagination a:hover {
+    opacity: 0.5;
+}
+
+/*####################################################*/
+/* Detail.html */
+
+.head {
+    display: flex;
+    background-color: gray;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.authors {
+    flex: 20%
+}
+
+.content {
+    flex: 80%;
+}
+
+.body {
+    display: flex;
+    background-color: black;
+    padding: 10px;
+    margin-top: 5px;
+}
+
+.body .authors .username {
+    font-size: 20px;
+}
+
+.body .authors img{
+    max-width: 50px;
+    max-height: 80px;
+}
+
+.comment_area {
+    margin-top: 50px;
+}
+
+.comment_area textarea {
+    width: 100%;
+    min-height: 100px;
+    padding: 10px;
+    margin-block: 10px;
+}
+
+.comment_area input {
+    float: right;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.comment_area input:hover {
+    border: solid 1px black;
+}
+
+.comments_container {
+    margin-top: 50px;
+
+}

@@ -18,5 +18,22 @@ CREATE TABLE taikhoan (
 CREATE TABLE loaitaikhoan (
 	username VARCHAR(255) PRIMARY KEY,
 	type VARCHAR(10),
-	CONSTRAINT account_type FOREIGN KEY (username) REFERENCES Taikhoan(username) ON DELETE CASCADE
+	CONSTRAINT account_type FOREIGN KEY (username) REFERENCES taikhoan(username) ON DELETE CASCADE
+);
+
+CREATE TABLE diendan (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	author VARCHAR(255),
+	topic VARCHAR(255),
+	views INT,
+	CONSTRAINT author_forum FOREIGN KEY (author) REFERENCES taikhoan(username) ON DELETE CASCADE
+);
+
+CREATE TABLE noidungdiendan (
+	id INT PRIMARY KEY,
+	user VARCHAR(255),
+	comment TEXT,
+	post_date DATE,
+	CONSTRAINT diendan_noidung FOREIGN KEY (id) REFERENCES diendan(id) ON DELETE CASCADE,
+	CONSTRAINT diendan_docgia FOREIGN KEY (user) REFERENCES taikhoan(username) ON DELETE CASCADE
 );
