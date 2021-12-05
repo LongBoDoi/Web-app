@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diễn đàn chung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+    <form method="post" action="CreateForum.php" onsubmit="document.getElementById('date_id').value = get_post_date();">
+        <input type="hidden" id="date_id" name="post_date">
+        <input type="hidden" id="account_id" name="author_id">
+        <div class="forum_properties">
+            <div>Chủ đề</div>
+            <label>
+                <input id="first_topic" class="text_box" name="topic_created" type="text" aria-multiline="true">
+            </label>
+            <div id="question_title">Câu hỏi</div>
+            <label>
+                <textarea class="text_box" id="first_question" name="question_created"></textarea>
+            </label>
+            <input type="submit" id="forum_create_submit" value="ĐĂNG">
+        </div>
+    </form>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>
+
+<script>
+    document.getElementById('account_id').value = window.sessionStorage.getItem('account_id');
+</script>

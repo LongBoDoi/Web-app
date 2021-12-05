@@ -1,6 +1,7 @@
 body{
     background: url(background.jpg);
     background-size: cover;
+    height: 100vh;
 }
 .main{
     padding: 65px 0px 50px;

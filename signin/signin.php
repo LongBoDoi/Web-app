@@ -6,13 +6,15 @@
 	if ($conn->connect_error) {
 		die('Connection Failed : '.$conn->connect_error);
 	} else {
-		$stmt = $conn->prepare("SELECT username, password
+		$stmt = $conn->prepare("SELECT username, password, id
 					FROM taikhoan
 					WHERE username=?
 					AND password=?;");
 		$stmt->bind_param("ss", $username, $password);
 		$stmt->execute();
 		$result = $stmt->get_result();
+		$info = $result->fetch_array(MYSQLI_ASSOC);
+		$account_id = $info['id'];
 		$stmt->close();
 		$conn->close();
 	}
@@ -22,6 +24,7 @@
     var log_in = '<?=$result->num_rows?>';
     if (log_in == 1) {
         window.sessionStorage.setItem('username', '<?=$username?>');
+        window.sessionStorage.setItem('account_id', '<?=$account_id?>');
         window.alert('Đăng nhập thành công');
         window.location.assign('../Main/main.html');
     } else {

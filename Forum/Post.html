@@ -9,6 +9,10 @@
 </head>
 <body>
 <div class="container">
+    <div>
+        <button id="create_forum_button" onclick="window.location.assign('Create.html')">Tạo chủ đề mới</button>
+    </div>
+    <br><br>
     <div class="posts_table">
         <div class="table_head">
             <div class="status">Status</div>
@@ -18,12 +22,15 @@
         </div>
         <div class="table_row">
             <div class="status"><i class="far fa-comment-dots"></i></div>
-                <div class="subjects"><a href="#">Is learing Python worth it?</a>
-                    <br>
-                    <span>Started by <b><a href="#">User</a></b>.</span>
-                </div>
+            <div class="subjects"><form>
+                <input type="hidden" value="hello" name="topic_id">
+                <input type="submit" class="topic_submit" value="Topic">
+                </form>
+                <br>
+                <span>Started by <b><a href="#"><?=$final_results[0]['fullname']?></a></b>.</span>
+            </div>
             <div class="replies">
-                2 replies <br>125 views
+                2 replies <br> <?=$final_results[0]['views']?> views
             </div>
             <div class="last_reply">
                 Oct 12 2021

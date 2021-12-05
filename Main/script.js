@@ -13,6 +13,10 @@ let username_info = document.createElement('input');
 username_info.type = 'hidden';
 username_info.value = window.sessionStorage.getItem('username');
 username_info.name = 'username_info';
+let input_username = document.createElement('input');
+input_username.type = 'hidden';
+input_username.value = window.sessionStorage.getItem('username');
+input_username.name = 'input_username';
 let profile_submit = document.createElement('input');
 profile_submit.type = 'submit';
 profile_submit.id = 'submit';
@@ -21,11 +25,12 @@ profile_submit.onmouseenter = function () {
 	profile_submit.style.cursor = 'pointer';
 };
 profile_form.appendChild(username_info);
+profile_form.appendChild(input_username);
 profile_form.appendChild(profile_submit);
 
 const toolbar_button_names = ['Trang chủ', 'Danh sách sinh viên', 'Thông báo', 'Diễn đàn chung', 'Sự kiện'];
 const toolbar_button_left = ['24%', '33%', '49.1%', '58.5%', '71.5%'];
-const toolbar_button_links = ['../Main/main.html', '../List/List.html', '', '', ''];
+const toolbar_button_links = ['../Main/main.html', '../List/List.php', '', '../Forum/Post.php', ''];
 toolbar_buttons = [];
 for (let i = 0; i < toolbar_button_names.length; i++) {
 	let btn = document.createElement('button');

@@ -2,7 +2,8 @@ CREATE DATABASE cuusinhvien;
 USE cuusinhvien;
 
 CREATE TABLE taikhoan (
-	username VARCHAR(255) PRIMARY KEY,
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	username VARCHAR(255),
 	password VARCHAR(255),
 	fullname VARCHAR(255),
 	grade VARCHAR(100),
@@ -12,28 +13,24 @@ CREATE TABLE taikhoan (
 	website VARCHAR(255),
 	phone VARCHAR(20),
 	address VARCHAR(255),
-	achievement TEXT
-);
-
-CREATE TABLE loaitaikhoan (
-	username VARCHAR(255) PRIMARY KEY,
-	type VARCHAR(10),
-	CONSTRAINT account_type FOREIGN KEY (username) REFERENCES taikhoan(username) ON DELETE CASCADE
+	achievement TEXT,
+	account_type VARCHAR(100)
 );
 
 CREATE TABLE diendan (
 	id INT PRIMARY KEY AUTO_INCREMENT,
-	author VARCHAR(255),
+	author_id INT,
 	topic VARCHAR(255),
 	views INT,
-	CONSTRAINT author_forum FOREIGN KEY (author) REFERENCES taikhoan(username) ON DELETE CASCADE
+	CONSTRAINT author_forum FOREIGN KEY (author_id) REFERENCES taikhoan(id) ON DELETE CASCADE
 );
 
 CREATE TABLE noidungdiendan (
-	id INT PRIMARY KEY,
-	user VARCHAR(255),
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	forum_id INT,
+	user_id INT,
 	comment TEXT,
-	post_date DATE,
-	CONSTRAINT diendan_noidung FOREIGN KEY (id) REFERENCES diendan(id) ON DELETE CASCADE,
-	CONSTRAINT diendan_docgia FOREIGN KEY (user) REFERENCES taikhoan(username) ON DELETE CASCADE
+	post_date DATETIME,
+	CONSTRAINT diendan_noidung FOREIGN KEY (forum_id) REFERENCES diendan(id) ON DELETE CASCADE,
+	CONSTRAINT diendan_docgia FOREIGN KEY (user_id) REFERENCES taikhoan(id) ON DELETE CASCADE
 );
