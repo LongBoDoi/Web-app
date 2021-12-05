@@ -475,3 +475,14 @@ input[type="button"] {
 	border: 0;
 	transition: 0.4s;
 }
+
+#delete_button {
+	color: #ff3366;
+	float: right;
+	margin-top: 10%;
+	margin-right: -7%;
+	font-size: 20px;
+	width: 40%;
+	height: 40px;
+	font-weight: bold;
+}

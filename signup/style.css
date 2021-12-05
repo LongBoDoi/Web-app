@@ -1,7 +1,7 @@
 body{
 	background: url(background.jpg);
 	background-size: cover;
-	height: 110vh;
+	padding-bottom: 60%;
 }
 .main{
 padding: 65px 0px 50px;
@@ -27,6 +27,17 @@ input[type="text"]{
     border: none;
     border-bottom: 1px solid #ffffff;
     width:97%;
+}
+.info_for_update {
+	background: transparent;
+	padding: 12px 13px 20px 0px;
+	font-size: 15px;
+	color: #ffffff;
+	display: inline-block;
+	outline: none;
+	border: none;
+	border-bottom: 1px solid #ffffff;
+	width:97%;
 }
 
 input[type="password"]{

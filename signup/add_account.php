@@ -3,6 +3,7 @@
 		$password = $_POST['password'];
 		$fullname = $_POST['fullname'];
 		$dateofbirth = $_POST['birth'];
+		$gender = $_POST['gender'];
 		$grade = $_POST['grade'];
 		$email = $_POST['email'];
 		$phone = $_POST['phone'];
@@ -24,9 +25,9 @@
 		        $stmt->close();
 
                 /* Add new account to the database */
-                $stmt = $conn->prepare("INSERT INTO taikhoan(username, password, fullname, grade, date_of_birth, email, phone, account_type)
-                    VALUES(?, ?, ?, ?, ?, ?, ?, 'Sinh viên');");
-                $stmt->bind_param("sssssss", $username, $password, $fullname, $grade, $dateofbirth, $email, $phone);
+                $stmt = $conn->prepare("INSERT INTO taikhoan(username, password, fullname, grade, gender, date_of_birth, email, phone, account_type)
+                    VALUES(?, ?, ?, ?, ?, ?, ?, ?, 'Sinh viên');");
+                $stmt->bind_param("ssssssss", $username, $password, $fullname, $grade, $gender, $dateofbirth, $email, $phone);
                 $stmt->execute();
                 $stmt->close();
 

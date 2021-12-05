@@ -40,7 +40,8 @@
 	    $student_list = array();
 
         $stmt = $conn->prepare("SELECT id, username, fullname, grade, date_of_birth, gender, address, achievement
-                                FROM taikhoan;");
+                                FROM taikhoan
+                                WHERE account_type = 'Sinh viên';");
         $stmt->execute();
         $result = $stmt->get_result();
         while ($info = $result->fetch_array(MYSQLI_ASSOC)) {

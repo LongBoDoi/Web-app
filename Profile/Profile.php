@@ -16,6 +16,11 @@
         $stmt->execute();
         $result = $stmt->get_result();
         $info = $result->fetch_array(MYSQLI_ASSOC);
+        $user_id = $info['id'];
+        $is_admin = 0;
+        if ($info['account_type'] == 'Quản trị viên') {
+            $is_admin = 1;
+        }
 
         $stmt->close();
         $conn->close();
@@ -30,7 +35,6 @@
 <link href="AboutPageAssets/styles/aboutPageStyle.css" rel="stylesheet" type="text/css">
 <link href="../Main/toolbar_style.css" rel="stylesheet" type="text/css">
 
-<!--The following script tag downloads a font from the Adobe Edge Web Fonts server for use within the web page. We recommend that you do not modify it.-->
 <script>var __adobewebfontsappname__="dreamweaver"</script><script src="http://use.edgefonts.net/montserrat:n4:default;source-sans-pro:n2:default.js" type="text/javascript"></script>
 </head>
 
@@ -44,7 +48,7 @@
   <!-- Identity details -->
   <section class="profileHeader">
     <h1><?=$info['fullname']?></h1>
-    <h3>Cựu sinh viên khoá <?=$info['grade']?> Đại học Công nghệ, ĐHQGHN</h3>
+    <h3 id='role'>Cựu sinh viên khoá <?=$info['grade']?> Đại học Công nghệ, ĐHQGHN</h3>
     <hr>
 
   </section>
@@ -81,9 +85,24 @@
 </section>
 
 <div id='other_buttons'></div>
+<div id='delete_button'></div>
 
 <script src="../Main/script.js"></script>
 <script src="script.js"></script>
+<script>
+    if (<?=$is_admin?> === 1) {
+        document.getElementById('role').innerHTML = 'Quản trị viên';
+    }
+
+    if (window.sessionStorage.getItem('account_type') === "Quản trị viên") {
+        if (<?=$self_profile?> === 0) {
+            document.getElementById('delete_button').innerHTML = `<form method='post' action='DeleteUser.php'>
+                                  <input type="hidden" name='user_id' value='<?=$user_id?>'>
+                                  <input type="submit" id='delete_button' name="submit" value="Xoá người dùng">
+                              </form>`;
+        }
+    }
+</script>
 </body>
 </html>
 
@@ -95,9 +114,10 @@
                                                                       </form>
                                                                       <input type='button' id='update_button' value='Đăng xuất' onclick="window.sessionStorage.removeItem('username');
                                                                                                                                         window.location.assign('../Home_page/home_page.html');
-                                                                                                                                        window.sessionStorage.removeItem('account_id');">
+                                                                                                                                        window.sessionStorage.removeItem('account_id');
+                                                                                                                                        window.sessionStorage.removeItem('account_type');">
                     `;
         let usn = document.getElementById('hidden');
         usn.value = window.sessionStorage.getItem('username');
-    }
+    };
 </script>

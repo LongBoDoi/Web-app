@@ -32,7 +32,8 @@
 
         $stmt = $conn->prepare("SELECT COUNT(forum_id) as num
                                 FROM noidungdiendan
-                                GROUP BY forum_id");
+                                GROUP BY forum_id
+                                ORDER BY forum_id DESC");
         $stmt->execute();
         $result = $stmt->get_result();
         while ($info = $result->fetch_array(MYSQLI_ASSOC)) {
@@ -42,7 +43,8 @@
 
         $stmt = $conn->prepare("SELECT tk.fullname, dd.topic, dd.views, dd.id, tk.username
                                 FROM diendan dd, taikhoan tk
-                                WHERE dd.author_id = tk.id");
+                                WHERE dd.author_id = tk.id
+                                ORDER BY dd.id DESC");
         $stmt->execute();
         $result = $stmt->get_result();
         while ($info = $result->fetch_array(MYSQLI_ASSOC)) {
@@ -59,7 +61,7 @@
                                 AND nd.user_id = tk.id
                                 AND nd.post_date = max_date.max
                                 AND nd.forum_id = max_date.forum_id
-                                ORDER BY dd.id");
+                                ORDER BY dd.id DESC");
         $stmt->execute();
         $result = $stmt->get_result();
         while ($info = $result->fetch_array(MYSQLI_ASSOC)) {
