@@ -32,7 +32,7 @@ a {
 /* List.html */
 
 .container {
-  margin: 0 5% 5%;
+  margin: 4% 5% 5%;
   padding: 20px;
 }
 
@@ -143,4 +143,22 @@ a {
   border: transparent;
   background: transparent;
   cursor: pointer;
+}
+
+
+.search1{
+	float:right;
+		
+}
+.search2{
+	float:right;
+	margin:0 7% 0 0;
+	
+}
+.search_button{
+	color: #ffffff;
+	display: inline-table;
+}
+.line_search{
+	height: 20px;
 }
