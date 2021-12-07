@@ -17,7 +17,7 @@
         <div class="search">
             <label>Tìm kiếm theo: </label>
             <div>
-                <select name="search_label">
+                <select name='search_label'>
                     <option value="id">ID</option>
                     <option value="fullname">Tên</option>
                     <option value="grade">Khóa</option>
@@ -48,6 +48,9 @@
 </html>
 
 <?php
+    $label = $_GET['search_label'];
+    $data = $_GET['search_data'];
+
     $conn = new mysqli('localhost','root','','cuusinhvien');
     if ($conn->connect_error) {
 	    die('Connection Failed : '.$conn->connect_error);
@@ -56,7 +59,9 @@
 
         $stmt = $conn->prepare("SELECT id, username, fullname, grade, date_of_birth, gender, address, achievement
                                 FROM taikhoan
-                                WHERE account_type = 'Sinh viên';");
+                                WHERE account_type = 'Sinh viên'
+                                AND $label = ?;");
+        $stmt->bind_param("s", $data);
         $stmt->execute();
         $result = $stmt->get_result();
         while ($info = $result->fetch_array(MYSQLI_ASSOC)) {

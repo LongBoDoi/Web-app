@@ -32,7 +32,7 @@ a {
 /* List.html */
 
 .container {
-  margin: 4% 5% 5%;
+  margin: 0 5% 5%;
   padding: 20px;
 }
 
@@ -145,20 +145,14 @@ a {
   cursor: pointer;
 }
 
+/* Search list */
 
-.search1{
-	float:right;
-		
+.search {
+  display: flex;
+  float: right;
+  margin-top: -3%;
 }
-.search2{
-	float:right;
-	margin:0 7% 0 0;
-	
-}
-.search_button{
-	color: #ffffff;
-	display: inline-table;
-}
-.line_search{
-	height: 20px;
+
+.search div {
+  margin-left: 7px;
 }

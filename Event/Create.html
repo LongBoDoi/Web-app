@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sự kiện</title>
+  <link rel="stylesheet" href="../Main/toolbar_style.css">
+  <link rel="stylesheet" href="../Forum/CreateStyle.css">
+</head>
+<body>
+
+<div id="header-01"><h1>Sự kiện</h1></div>
+
+<div class="container">
+  <form method="post" action="CreateEvent.php" onsubmit="document.getElementById('date_id').value = get_post_date();">
+    <input type="hidden" id="date_id" name="post_date">
+    <div class="forum_properties">
+      <div>Tên sự kiện</div>
+        <label>
+          <input id="first_topic" class="text_box" name="topic_created" type="text" aria-multiline="true">
+        </label>
+      <div class="event_type">Thời gian</div>
+        <label>
+          <input id="event_time" class="text_box" name="event_time" type="datetime-local" aria-multiline="true">
+        </label>
+      <div class="event_type">Địa điểm</div>
+        <label>
+          <input id="event_location" class="text_box" name="event_location" type="text" aria-multiline="true">
+        </label>
+      <div id="question_title">Mô tả</div>
+        <label>
+          <textarea class="text_box" id="first_question" name="description"></textarea>
+        </label>
+      <input type="submit" id="forum_create_submit" value="TẠO">
+    </div>
+  </form>
+</div>
+
+
+<script src="../Main/script.js"></script>
+<script src="../Forum/script.js"></script>
+</body>
+</html>
+
+<script>
+  document.getElementById('account_id').value = window.sessionStorage.getItem('account_id');
+</script>

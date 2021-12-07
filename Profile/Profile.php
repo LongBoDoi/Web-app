@@ -44,7 +44,7 @@
   <div class="header-01"><h1>Thông tin sinh viên</h1></div>
   <div class="profilePhoto">
     <!-- Profile photo -->
-    <img src="AboutPageAssets/images/profilephoto.png" alt="sample"> </div>
+    <img src="https://courses.uet.vnu.edu.vn/theme/image.php/lambda/core/1635321604/u/f1" alt="sample"> </div>
   <!-- Identity details -->
   <section class="profileHeader">
     <h1><?=$info['fullname']?></h1>

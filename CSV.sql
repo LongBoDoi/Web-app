@@ -34,3 +34,26 @@ CREATE TABLE noidungdiendan (
 	CONSTRAINT diendan_noidung FOREIGN KEY (forum_id) REFERENCES diendan(id) ON DELETE CASCADE,
 	CONSTRAINT diendan_docgia FOREIGN KEY (user_id) REFERENCES taikhoan(id) ON DELETE CASCADE
 );
+
+CREATE TABLE thongbao (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	title VARCHAR(255),
+	content TEXT,
+	post_date DATETIME
+);
+
+CREATE TABLE sukien (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	title VARCHAR(255),
+	location VARCHAR(255),
+	time DATETIME,
+	description TEXT
+);
+
+CREATE TABLE thamgiasukien (
+	id INT PRIMARY KEY AUTO_INCREMENT,
+	event_id INT,
+	participant INT,
+	CONSTRAINT nguoithamgia FOREIGN KEY (participant) REFERENCES taikhoan(id) ON DELETE CASCADE,
+	CONSTRAINT sukien_nguoithamgia FOREIGN KEY (event_id) REFERENCES sukien(id) ON DELETE CASCADE
+);

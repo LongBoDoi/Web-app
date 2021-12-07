@@ -54,3 +54,11 @@ body {
     height: 90px;
     float: right;
 }
+
+.event_type {
+    margin-top: 1%;
+}
+
+#event_location {
+    width: 50%;
+}

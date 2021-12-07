@@ -30,7 +30,7 @@ profile_form.appendChild(profile_submit);
 
 const toolbar_button_names = ['Trang chủ', 'Danh sách sinh viên', 'Thông báo', 'Diễn đàn chung', 'Sự kiện'];
 const toolbar_button_left = ['24%', '33%', '49.1%', '58.5%', '71.5%'];
-const toolbar_button_links = ['../Main/main.html', '../List/List.php', '../Notification/Notification.php', '../Forum/Post.php', ''];
+const toolbar_button_links = ['../Main/main.html', '../List/List.php', '../Notification/Notification.php', '../Forum/Post.php', '../Event/Event.php'];
 toolbar_buttons = [];
 for (let i = 0; i < toolbar_button_names.length; i++) {
 	let btn = document.createElement('button');
