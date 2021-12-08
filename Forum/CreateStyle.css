@@ -29,6 +29,7 @@ body {
 .text_box {
     font-size: 30px;
     margin-top: 20px;
+    background: black;
 }
 
 #first_question {
@@ -53,6 +54,7 @@ body {
     width: 15%;
     height: 90px;
     float: right;
+    color: white;
 }
 
 .event_type {

@@ -51,7 +51,7 @@
                                 FROM thamgiasukien tg, taikhoan tk
                                 WHERE tg.participant = tk.id
                                 AND tk.account_type = 'Sinh viên'
-                                AND tg.id = ?");
+                                AND tg.event_id = ?");
         $stmt->bind_param("s", $id);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -86,25 +86,6 @@
                                                                               	</div>
                                                                           
                                                                               <div id='delete_button'></div>`;
-                        if (window.sessionStorage.getItem('account_type') === 'Quản trị viên') {
-                            document.getElementById('delete_button').innerHTML =    `<form method='POST' action='DeleteEvent.php'>
-                                                                                        <input type='hidden' name='event_id' id='event_id'>
-                                                                                        <input type='submit' id='notification_delete' value='Xoá sự kiện'>
-                                                                                    </form>`;
-                            document.getElementById('event_id').value = $id;
-                        } else {
-                            if ($has_joined === 1) {
-                                document.getElementById('head_button').innerHTML = `<label id=participate_button>Đã tham gia</label>`;
-                            } else {
-                                document.getElementById('head_button').innerHTML =    `<form method='POST' action='JoinEvent.php'>
-                                                                                        <input type='hidden' name='event_id' id='event_id'>
-                                                                                        <input type='hidden' name='user_id' id='user_id'>
-                                                                                        <input type='submit' id='participate_button' value='Tham gia'>
-                                                                                    </form>`;
-                            }
-                            document.getElementById('event_id').value = $id;
-                            document.getElementById('user_id').value = window.sessionStorage.getItem('account_id');
-                        }
                         let each_student = null;
                         let table = document.getElementById('participant_table');";
         foreach ($student_list as $student) {
@@ -127,6 +108,25 @@
         for (let i = 0; i < profiles.length; i++) {
             profiles[i].value = window.sessionStorage.getItem('username');
         }
+        if (window.sessionStorage.getItem('account_type') === 'Quản trị viên') {
+                                    document.getElementById('delete_button').innerHTML =    `<form method='POST' action='DeleteEvent.php'>
+                                                                                                <input type='hidden' name='event_id' id='event_id'>
+                                                                                                <input type='submit' id='notification_delete' value='Xoá sự kiện'>
+                                                                                            </form>`;
+                                    document.getElementById('event_id').value = $id;
+                                } else {
+                                    if ($has_joined === 1) {
+                                        document.getElementById('head_button').innerHTML = `<label id=participate_button>Đã tham gia</label>`;
+                                    } else {
+                                        document.getElementById('head_button').innerHTML =    `<form method='POST' action='JoinEvent.php'>
+                                                                                                <input type='hidden' name='event_id' id='event_id'>
+                                                                                                <input type='hidden' name='user_id' id='user_id'>
+                                                                                                <input type='submit' id='participate_button' value='Tham gia'>
+                                                                                            </form>`;
+                                    }
+                                    document.getElementById('event_id').value = $id;
+                                    document.getElementById('user_id').value = window.sessionStorage.getItem('account_id');
+                                };
         </script>";
 
         echo $final_html;

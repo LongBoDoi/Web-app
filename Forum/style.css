@@ -14,6 +14,7 @@ body {
 html {
     font-size: 14px;
     font-family: 'Titillium Web', sans-serif;
+    color: white;
 }
 
 a {
@@ -43,6 +44,7 @@ a {
     display: flex;
     float: right;
     margin-right: 80px;
+    color: white;
 }
 
 .table_head {
@@ -168,6 +170,8 @@ a {
     min-height: 100px;
     padding: 10px;
     margin-block: 10px;
+    background-color: black;
+    color: white;
 }
 
 .comment_area input {
@@ -175,6 +179,8 @@ a {
     padding: 10px;
     border-radius: 10px;
     cursor: pointer;
+    background: #ff3366;
+    color: white;
 }
 
 .comment_area input:hover {

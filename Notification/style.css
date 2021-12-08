@@ -14,6 +14,7 @@ body {
 html {
     font-size: 17px;
     font-family: 'Titillium Web', sans-serif;
+    color: white;
 }
 
 a {
@@ -43,7 +44,8 @@ a {
 
 #create_notification {
     font-size: 20px;
-    color: #ff3366;
+    color: white;
+    background-color: #ff3366;
 }
 
 .table_head {
